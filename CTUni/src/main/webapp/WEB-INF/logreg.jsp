@@ -15,6 +15,10 @@
 
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
+<link rel="stylesheet" href="css/style.css">
+
+<script type="text/javascript" src="js/app.js"></script>
+
 </head>
 
 <body>
@@ -23,6 +27,7 @@
 	<div class="container">
 
 		<div class="row mt-3">
+<p> LOGO  </p>
 
 			<div class="col-4 offset-1">
 				<h2>Register!</h2>
@@ -77,6 +82,9 @@
 				</form:form>
 			</div>
 		</div>
+
+
+
 
 
 	</div>
