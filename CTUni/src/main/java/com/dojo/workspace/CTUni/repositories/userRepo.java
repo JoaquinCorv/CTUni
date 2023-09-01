@@ -2,11 +2,11 @@ package com.dojo.workspace.CTUni.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.julian.examen2.models.user;
+import com.dojo.workspace.CTUni.models.Usuario;
 
-public interface userRepo extends CrudRepository<user, Long> {
+public interface userRepo extends CrudRepository<Usuario, Long> {
 	
-	user findByEmail(String email);
+	Usuario findByEmail(String email);
 	
 
 }

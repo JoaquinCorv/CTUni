@@ -6,8 +6,8 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
-import com.julian.examen2.models.user;
-import com.julian.examen2.repositories.userRepo;
+import com.dojo.workspace.CTUni.models.Usuario;
+import com.dojo.workspace.CTUni.repositories.userRepo;
 
 @Service
 public class Userservices {
@@ -18,12 +18,12 @@ public class Userservices {
 	}
 
 
-	public user encontrarPorEmail(String email) {
+	public Usuario encontrarPorEmail(String email) {
 		return userRepo.findByEmail(email);
 	}
 	
-	public user encontrarUserPorId(Long id) {
-		Optional<user> user = userRepo.findById(id);
+	public Usuario encontrarUserPorId(Long id) {
+		Optional<Usuario> user = userRepo.findById(id);
 		if(user.isPresent()) {
 			return user.get();
 		}
@@ -31,9 +31,9 @@ public class Userservices {
 	}
 
 
-	public user registroUsuario(user user, BindingResult resultado) {
+	public Usuario registroUsuario(Usuario user, BindingResult resultado) {
 
-		user usuarioRegistrado = userRepo.findByEmail(user.getEmail());
+		Usuario usuarioRegistrado = userRepo.findByEmail(user.getEmail());
 
 		if (usuarioRegistrado != null) {
 			resultado.rejectValue("email", "Matches", "Correo electronico ya existe");
@@ -53,7 +53,7 @@ public class Userservices {
 
 	public boolean authenthicateUser(String email, String password, BindingResult resultado) {
 
-		user usuarioRegistrado = userRepo.findByEmail(email);
+		Usuario usuarioRegistrado = userRepo.findByEmail(email);
 
 		if (usuarioRegistrado == null) {
 			resultado.rejectValue("email", "Matches", "Email no valido");
