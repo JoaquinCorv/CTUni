@@ -24,6 +24,11 @@ public class usercontroller {
 	}
 	
 	@GetMapping("/")
+	public String main(Model viewModel) {
+		return "inicio.jsp";
+	}
+	
+	@GetMapping("/CTUniRegister")
 	public String raiz(Model viewModel) {
 		viewModel.addAttribute("user", new Usuario());
 		viewModel.addAttribute("login", new logreg());
