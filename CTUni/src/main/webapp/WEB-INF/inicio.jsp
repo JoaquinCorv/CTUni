@@ -22,12 +22,28 @@
 
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-2">Aca va el logo</div>
-			<div class="col-10 text-end">Login y Registro</div>
+	<header>
+		<div class="logo-loginReg">
+			<div class="logo">
+				<p>Acá va el Logo</p>
+			</div>
+			<div class="loginReg">
+				<div class="login">
+					<a href="#">Login</a>
+				</div>
+				<div class="reg">
+					<a href="#">Registrarse</a>
+				</div>
+			</div>
 		</div>
-		<div class="row text center">El Navegador</div>
-	</div>
+		<nav>
+			<ul class="listaNav">
+				<li class="listaItem"><a class="listaItemLink" href="#">Link Uno</a></li>
+				<li class="listaItem"><a class="listaItemLink" href="#">Link Dos</a></li>
+				<li class="listaItem"><a class="listaItemLink" href="#">Link Tres</a></li>
+				<li class="listaItem"><a class="listaItemLink" href="#">Link Cuatro</a></li>
+			</ul>
+		</nav>
+	</header>
 </body>
 </html>

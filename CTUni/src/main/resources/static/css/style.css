@@ -1,8 +1,43 @@
-p {
-	color:red;
-	width: 20px;
-	height: 20px;
-	
+body{
+	background-color: black;
+	color: white;
 }
 
+.logo-loginReg{
+	padding-top: 12px;
+}
 
+.logo{
+	display: inline-block;
+	padding-left: 20px;
+}
+
+.loginReg{
+	display: inline-block;
+}
+
+.login{
+	display: inline-block;
+	padding-left: 1080px;
+}
+
+.reg{
+	display: inline-block;
+	padding-left: 20px;
+}
+
+.listaNav{
+	display: flex;
+	padding-top: 12px;
+	padding-right: 30px;
+	justify-content: space-evenly;
+}
+
+.listaItem{
+	list-style: none;
+}
+
+.listaItemLink{
+	font-size: large;
+	text-decoration: none;
+}
