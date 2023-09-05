@@ -9,7 +9,7 @@
 <head>
 <meta charset="ISO-8859-1">
 
-<title>Pagina Principal</title>
+<title>Ailin la mejor</title>
 
 <link rel="stylesheet"
 	href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
