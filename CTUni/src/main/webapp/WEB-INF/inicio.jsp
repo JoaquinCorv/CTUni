@@ -34,7 +34,7 @@
 						<a href="#">Login</a>
 					</div>
 					<div class="reg">
-						<a href="#">Registrarse</a>
+						<a href="/CTUniRegister">Registrarse</a>
 					</div>
 				</div>
 			</div>
