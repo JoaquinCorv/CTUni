@@ -12,11 +12,8 @@ import jakarta.persistence.Transient;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import lombok.Builder;
-import lombok.Data;
 
-@Data
-@Builder
+
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
