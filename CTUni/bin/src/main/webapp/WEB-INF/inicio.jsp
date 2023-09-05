@@ -9,7 +9,7 @@
 <head>
 <meta charset="ISO-8859-1">
 
-<title>Ailin la mejor</title>
+<title>Pagina Principal</title>
 
 <link rel="stylesheet"
 	href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
@@ -34,7 +34,7 @@
 						<a href="#">Login</a>
 					</div>
 					<div class="reg">
-						<a href="/CTUniRegister">Registrarse</a>
+						<a href="#">Registrarse</a>
 					</div>
 				</div>
 			</div>

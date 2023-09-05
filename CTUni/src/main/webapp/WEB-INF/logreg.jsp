@@ -11,11 +11,8 @@
 
 <title>login and register</title>
 
-<link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
 
-<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/logreg.css">
 
 <script type="text/javascript" src="js/app.js"></script>
 
@@ -24,10 +21,22 @@
 <body>
 
 
-	<div class="container">
 
-		<div class="row mt-3">
-<p> LOGO  </p>
+
+
+<header>
+  <div class="container">
+ <div class="logo">
+      <img src="./imagenes/logoProyecto.png" alt="logoimg">
+    </div>
+    <nav>
+      <a href="#">Carreras</a>
+      <a href="#">Universidades</a>
+      <a href="#">rellenar</a>
+      <a href="#">rellenar</a>
+    </nav>
+  </div>
+</header>
 
 			<div class="col-4 offset-1">
 				<h2>Register!</h2>
@@ -81,13 +90,12 @@
 					<input type="submit" value="Login!" />
 				</form:form>
 			</div>
-		</div>
+		
 
 
 
 
 
-	</div>
 
 
 
