@@ -74,7 +74,44 @@ label {
   font-weight: bold;
 }
 
+.listaNav{
+	display: flex;
+	padding-top: 12px;
+	padding-right: 30px;
+	justify-content: space-evenly;
+	list-style-type: none;
+    margin: 0;
+}
+.listaItem{
+	list-style: none;
+	padding: 15px;
+    position: relative;
+    cursor: pointer;
+}
 
+.listaItemLink{
+	font-size: large;
+	text-decoration: none;
+	color: white;
+}
+.listaItem ul{
+	display: none;
+    position: absolute;
+    background-color: #444;
+    border-radius: 0 0 5px 5px;
+}
+
+
+.listaItem:hover ul {
+    display: block;
+}
+.listaItem:hover ul li{
+	list-style-type: none;
+    padding:10px;
+    display: flex;
+    padding: 10px;
+    width:400px;
+}
 
 input[type="submit"] {
   background-color: #007bff;

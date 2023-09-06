@@ -2,20 +2,42 @@ body{
 	background-color: #89beff;
 	color: white;
 }
-.logo-loginReg{
-	padding-top: 12px;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
 }
 
-.logo{
-	display: inline-block;
-	padding-top: 0px;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.logo img{
-	display: inline-block;
-	width: 200px;
-	height: 100px;
-	padding-top: 0px;
+
+.logo img {
+  max-width: 100px;
 }
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
 
 .loginReg{
 	display: inline-block;
@@ -63,6 +85,8 @@ body{
     background-color: #444;
     border-radius: 0 0 5px 5px;
 }
+
+
 .listaItem:hover ul {
     display: block;
 }

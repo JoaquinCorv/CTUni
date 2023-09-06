@@ -27,16 +27,32 @@
 <header>
   <div class="container">
  <div class="logo">
+ <a href="/">
       <img src="./imagenes/logoProyecto.png" alt="logoimg">
+    </a>
     </div>
     <nav>
-      <a href="#">Carreras</a>
-      <a href="#">Universidades</a>
-      <a href="#">rellenar</a>
-      <a href="#">rellenar</a>
+      	<li class="listaItem" onclick="menuDesplegable"><a
+			class="listaItemLink" href="#">Carreras</a>
+			<ul class="categorias">
+			<li><a href="#">abogacia</a></li>
+			<li><a href="#">abogacia</a></li>
+			<li><a href="#">abogacia</a></li>
+		</ul></li>
+      					<li class="listaItem" onclick="menuDesplegable"><a
+						class="listaItemLink" href="#">universidades</a>
+						<ul class="categorias">
+							<li><a href="#">abogacia</a></li>
+							<li><a href="#">abogacia</a></li>
+							<li><a href="#">abogacia</a></li>
+						</ul></li>
+      <li class="listaItem" onclick="menuDesplegable"><a
+						class="listaItemLink" href="#">rellenar</a></li>
+     <li class="listaItem"><a
+						class="listaItemLink" href="/CTUniRegister">login/register</a>
     </nav>
   </div>
-</header>
+  </header>
 
 			<div class="col-4 offset-1">
 				<h2>Register!</h2>
