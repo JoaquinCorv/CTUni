@@ -9,7 +9,7 @@
 <head>
 <meta charset="ISO-8859-1">
 
-<title>Crea tu libro</title>
+<title>hola</title>
 
 <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
 
