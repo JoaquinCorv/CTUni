@@ -23,48 +23,35 @@
 
 </head>
 <body>
-	<div class="container">
-		<header>
-			<div class="logo-loginReg">
-				<div class="logo">
-					<img src="./imagenes/logoProyecto.png" alt="logoimg">
-				</div>
-				<div class="loginReg">
-					<div class="login">
-						<a href="#">Login</a>
-					</div>
-					<div class="reg">
-						<a href="/CTUniRegister">Registrarse</a>
-					</div>
-				</div>
-			</div>
-			<nav class="menu">
-				<ul class="listaNav">
-					<li class="listaItem" onclick="menuDesplegable"><a
-						class="listaItemLink" href="#">Facultades</a>
+<header>
+  <div class="container">
+ <div class="logo">
+ <a href="/">
+      <img src="./imagenes/logoProyecto.png" alt="logoimg">
+    </a>
+    </div>
+    <nav>
+      	<li class="listaItem" onclick="menuDesplegable"><a
+			class="listaItemLink" href="#">Carreras</a>
+			<ul class="categorias">
+			<li><a href="#">abogacia</a></li>
+			<li><a href="#">abogacia</a></li>
+			<li><a href="#">abogacia</a></li>
+		</ul></li>
+      					<li class="listaItem" onclick="menuDesplegable"><a
+						class="listaItemLink" href="#">universidades</a>
 						<ul class="categorias">
 							<li><a href="#">abogacia</a></li>
 							<li><a href="#">abogacia</a></li>
 							<li><a href="#">abogacia</a></li>
 						</ul></li>
-
-					<li class="listaItem" onclick="menuDesplegable"><a
-						class="listaItemLink" href="#">Carreras</a>
-						<ul class="categorias">
-							<li><a href="#">abogacia</a></li>
-							<li><a href="#">abogacia</a></li>
-							<li><a href="#">abogacia</a></li>
-						</ul></li>
-					<li class="listaItem" onclick="menuDesplegable"><a
-						class="listaItemLink" href="#">Localidad</a>
-						<ul class="categorias">
-							<li><a href="#">abogacia</a></li>
-							<li><a href="#">abogacia</a></li>
-							<li><a href="#">abogacia</a></li>
-						</ul></li>
-				</ul>
-			</nav>
-		</header>
+      <li class="listaItem" onclick="menuDesplegable"><a
+						class="listaItemLink" href="#">rellenar</a></li>
+     <li class="listaItem"><a
+						class="listaItemLink" href="/CTUniRegister">login/register</a>
+    </nav>
+  </div>
+  </header>
 		<main>
 			<div class="row">
 				<h2>Ranking de Universidades</h2>
