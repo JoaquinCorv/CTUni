@@ -96,11 +96,4 @@ public class Usuario {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	
-	
-	
-	
-	
-	
-	
 }
