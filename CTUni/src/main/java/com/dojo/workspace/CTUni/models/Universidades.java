@@ -35,7 +35,7 @@ public class Universidades {
 	
 	@NotBlank(message=" Por favor ingresa un apellido")
 	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
-	private String otroAtributo;
+	private String localidad;
 	
 	@Column(updatable = false)
 	private Date createdAt;
@@ -62,11 +62,12 @@ public class Universidades {
 	public void setRanking(int ranking) {
 		this.ranking = ranking;
 	}
-	public String getOtroAtributo() {
-		return otroAtributo;
+	
+	public String getLocalidad() {
+		return localidad;
 	}
-	public void setOtroAtributo(String otroAtributo) {
-		this.otroAtributo = otroAtributo;
+	public void setLocalidad(String localidad) {
+		this.localidad = localidad;
 	}
 	public String getPublicOrPrivate() {
 		return publicOrPrivate;
