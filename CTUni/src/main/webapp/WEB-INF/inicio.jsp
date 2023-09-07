@@ -99,8 +99,8 @@
 						<tbody>
 							<tr>
 								<th>Nombre de la carrera</th>
-								<th>Cuantos ingresantes por año</th>
-								<th>Dura tantos años</th>
+								<th>Cuantos ingresantes por aï¿½o</th>
+								<th>Dura tantos aï¿½os</th>
 								<th>Es requerida, no tanto, poco</th>
 							</tr>
 						</tbody>
