@@ -19,7 +19,7 @@ header {
 }
 
 .logo img {
-	max-width: 100px;
+	max-width: 120px;
 }
 
 nav {
@@ -52,7 +52,7 @@ nav a:hover {
 .listaItemLink {
 	font-size: large;
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 .listaItem ul {
