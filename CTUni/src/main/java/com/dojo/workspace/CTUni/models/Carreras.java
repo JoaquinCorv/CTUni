@@ -42,6 +42,8 @@ public class Carreras {
 	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
 	private Boolean salidaLaboral;//bueno,medio,poco requerido
 	
+	private String planDeEstudio;
+	
 	private Double costo;
 	
 	@Column(updatable = false)
@@ -61,6 +63,17 @@ public class Carreras {
 	public Carreras() {
 
 	}
+
+	
+	public String getPlanDeEstudio() {
+		return planDeEstudio;
+	}
+
+
+	public void setPlanDeEstudio(String planDeEstudio) {
+		this.planDeEstudio = planDeEstudio;
+	}
+
 
 	public Long getId() {
 		return id;
@@ -133,5 +146,4 @@ public class Carreras {
 	public void setCosto(Double costo) {
 		this.costo = costo;
 	}
-	
 }

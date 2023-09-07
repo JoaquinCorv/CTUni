@@ -65,16 +65,18 @@
 					<table class="table table-hover border">
 						<thead>
 							<tr>
-								<th>Posicion</th>
+								<th>Ranking</th>
 								<th>Universidad</th>
-								<th>Popularidad</th>
+								<th>Modalidad</th>
+								<th>Localidad</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<th>Item one</th>
-								<th>Item two</th>
-								<th>Item three</th>
+								<th>Que ranking es</th>
+								<th>Nombre uni</th>
+								<th>publica o privada</th>
+								<th>Capital(ponele)</th>
 							</tr>
 						</tbody>
 					</table>
@@ -90,14 +92,16 @@
 							<tr>
 								<th>Carrera</th>
 								<th>Numero de ingresantes</th>
-								<th>requerimiento</th>
+								<th>Duracion</th>
+								<th>Salida laboral</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<th>Item one</th>
-								<th>Item two</th>
-								<th>Item three</th>
+								<th>Nombre de la carrera</th>
+								<th>Cuantos ingresantes por año</th>
+								<th>Dura tantos años</th>
+								<th>Es requerida, no tanto, poco</th>
 							</tr>
 						</tbody>
 					</table>
