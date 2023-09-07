@@ -38,11 +38,6 @@ public class Carreras {
 	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
 	private String duracion;
 	
-	//creo que voy a sacar esto de la salida laboraL, buen concepto pero muy subjeivo
-	@NotBlank(message=" Por favor ingresa un apellido")
-	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
-	private Boolean salidaLaboral;//bueno,medio,poco requerido
-	
 	@Column(columnDefinition = "TEXT")
 	private String planDeEstudio;
 	
