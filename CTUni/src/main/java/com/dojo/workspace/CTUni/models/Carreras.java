@@ -50,7 +50,7 @@ public class Carreras {
 	@ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
         name = "carrera_especifica", 
-        joinColumns = @JoinColumn(name = "universidades_id"), 
+        joinColumns = @JoinColumn(name = "universidades_id"),
         inverseJoinColumns = @JoinColumn(name = "carreras_id")
     )     
     private List<Universidades> universidades;

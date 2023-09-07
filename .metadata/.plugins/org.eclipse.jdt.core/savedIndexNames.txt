@@ -80,7 +80,6 @@ INDEX VERSION 1.131+C:\Users\USER\Documents\GitHub\CTUni\.metadata\.plugins\org.
 391152665.index
 4078236021.index
 2114724009.index
-2107407535.index
 2093982060.index
 2414988983.index
 2682207517.index
