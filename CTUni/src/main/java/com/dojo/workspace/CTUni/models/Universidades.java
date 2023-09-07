@@ -55,7 +55,7 @@ public class Universidades {
 	private Date updatedAt;
 	
 	@ManyToMany(fetch = FetchType.LAZY)
-  @JoinTable(
+	@JoinTable(
       name = "carrera_especifica", 
       joinColumns = @JoinColumn(name = "universidades_id"), 
       inverseJoinColumns = @JoinColumn(name = "carreras_id")
