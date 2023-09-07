@@ -112,14 +112,6 @@ public class Carreras {
 		this.duracion = duracion;
 	}
 
-	public Boolean getSalidaLaboral() {
-		return salidaLaboral;
-	}
-
-	public void setSalidaLaboral(Boolean salidaLaboral) {
-		this.salidaLaboral = salidaLaboral;
-	}
-
 	public Date getCreatedAt() {
 		return createdAt;
 	}
