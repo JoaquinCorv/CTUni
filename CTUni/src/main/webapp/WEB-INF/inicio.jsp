@@ -57,7 +57,6 @@
 		</div>
 	</header>
 		<main>
-			<div class="row">
 				<h2>Ranking de Universidades</h2>
 			</div>
 			<div class="row">
@@ -87,6 +86,7 @@
 			</div>
 			<div class="row mt-4">
 			<h2>Ranking de Carreras</h2>
+			<div class="col-8">
 			<table class="table table-hover border">
 						<thead>
 							<tr>
