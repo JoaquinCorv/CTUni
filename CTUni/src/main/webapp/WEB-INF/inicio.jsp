@@ -57,7 +57,6 @@
 		</div>
 	</header>
 		<main>
-			<div class="row">
 				<h2>Ranking de Universidades</h2>
 			</div>
 			<div class="row">
@@ -87,6 +86,7 @@
 			</div>
 			<div class="row mt-4">
 			<h2>Ranking de Carreras</h2>
+			<div class="col-8">
 			<table class="table table-hover border">
 						<thead>
 							<tr>
@@ -99,8 +99,8 @@
 						<tbody>
 							<tr>
 								<th>Nombre de la carrera</th>
-								<th>Cuantos ingresantes por año</th>
-								<th>Dura tantos años</th>
+								<th>Cuantos ingresantes por aï¿½o</th>
+								<th>Dura tantos aï¿½os</th>
 								<th>Es requerida, no tanto, poco</th>
 							</tr>
 						</tbody>
