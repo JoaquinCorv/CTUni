@@ -66,7 +66,7 @@
 			</nav>
 		</header>
 		<main>
-			<div class="row">
+			<div class="row-1">
 				<h2>Ranking de Universidades</h2>
 			</div>
 			<div class="row">

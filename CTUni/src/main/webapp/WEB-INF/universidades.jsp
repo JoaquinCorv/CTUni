@@ -53,7 +53,7 @@
 		</div>
 	</header>
 	<main>
-		<div class="d-flex justify-content-center pt-4">
+		<div class="d-flex justify-content-center pt-5">
 			<h1>Nombre de la Universidad</h1>
 		</div>
 		<br>
@@ -62,11 +62,11 @@
 		</div>
 		<br>
 		<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes">Pública-Privada</p>
+			<p class="nroIngresantes"><ins>Instituci&oacuten:</ins> P&uacuteblica-Privada</p>
 		</div>
 		<br>
 		<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes"><ins>Ranking</ins>: aDeterminar</p>
+			<p class="nroIngresantes"><ins>Ranking</ins>: a Determinar</p>
 		</div>
 	</main>
 </body>
