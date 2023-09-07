@@ -1,31 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<!-- c:out ; c:forEach etc. -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!--Formateo fechas (date)-->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<!--Formulario form:form -->
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!--Para errores de renderizado en rutas PUT-->
 <%@ page isErrorPage="true"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-
-<title>CTUni #AilinLaMejor</title>
-
-<link rel="stylesheet"
-	href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
-
-
+<title>Nombre de la Carrera</title>
+<!--Bootstrap-->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-
-<link rel="stylesheet" href="css/inicio.css">
-
+<!--Cambiar para que coincida con tu archivo/estructura de nombres-->
+<link rel="stylesheet" href="/css/carreras.css">
+<link rel="icon" href="/css/carreras.css">
+<script type="text/javascript" src="/js/app.js"></script>
 <link rel="icon" href="imagenes/gorra-de-posgrado.png">
-
-<script type="text/javascript" src="js/app.js"></script>
-
 </head>
 <body>
-<header>
+	<header>
 		<div class="container-fluid">
 			<div class="logo">
 				<a href="/"> <img src="./imagenes/logoProyecto.png"
@@ -56,61 +54,29 @@
 			</nav>
 		</div>
 	</header>
-		<main>
-			<div class="row">
-				<h2>Ranking de Universidades</h2>
+	<main>
+	<section>
+			<div class="d-flex justify-content-center pt-4">
+				<h1>Nombre de la Carrera</h1>
 			</div>
-			<div class="row">
-				<div class="col-8">
-					<table class="table table-hover border">
-						<thead>
-							<tr>
-								<th>Posicion</th>
-								<th>Universidad</th>
-								<th>Popularidad</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th>Item one</th>
-								<th>Item two</th>
-								<th>Item three</th>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="col-4 pr-3">
-				<p>aca van los anuncios</p>
-				</div>
+			<br>
+			<div class="d-flex justify-content-center pt-2">
+				<p class="nroIngresantes"><ins>Número de Ingresantes</ins>:
+					insertarNroIngresantes</p>
 			</div>
-			<div class="row mt-4">
-			<h2>Ranking de Carreras</h2>
-			<table class="table table-hover border">
-						<thead>
-							<tr>
-								<th>Carrera</th>
-								<th>Numero de ingresantes</th>
-								<th>requerimiento</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th>Item one</th>
-								<th>Item two</th>
-								<th>Item three</th>
-							</tr>
-						</tbody>
-					</table>
+			<br>
+			<div class="d-flex justify-content-center pt-2">
+				<p class="nroIngresantes"><ins>Duración</ins>: insertarCantidadAños</p>
 			</div>
-		</main>
-		<footer>
-		<div class="row">
-		<div class="col-3">
-		<p>integrantes</p></div>
-		<div class="col-3">otros apartados</div>
-		<div class="col-3">otros apartados</div>
-		</div>
-		</footer>
-		</div>
+			<br>
+			<div class="d-flex justify-content-center pt-2">
+				<p class="nroIngresantes"><ins>Salida Laboral</ins>: insertarSalidaLaboral</p>
+			</div>
+			<br>
+			<div class="d-flex justify-content-center pt-2">
+				<p class="nroIngresantes"><ins>Costo</ins>: $xCantidad-Gratuita</p>
+			</div>
+		</section>
+	</main>
 </body>
 </html>
