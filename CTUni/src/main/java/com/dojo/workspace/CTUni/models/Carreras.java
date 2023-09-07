@@ -47,9 +47,6 @@ public class Carreras {
 	private Date createdAt;
 	private Date updatedAt;
 	
-//	@OneToMany(mappedBy="question", fetch = FetchType.LAZY)
-//    private List<Answer> answer;
-
 	@ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
         name = "carrera_especifica", 
