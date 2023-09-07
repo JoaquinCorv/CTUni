@@ -62,11 +62,11 @@
 		</div>
 		<br>
 		<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes">P&uacuteblica-Privada</p>
+			<p class="nroIngresantes"><ins>Instituci&oacuten:</ins> P&uacuteblica-Privada</p>
 		</div>
 		<br>
 		<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes"><ins>Ranking</ins>: aDeterminar</p>
+			<p class="nroIngresantes"><ins>Ranking</ins>: a Determinar</p>
 		</div>
 	</main>
 </body>
