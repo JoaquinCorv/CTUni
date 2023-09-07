@@ -37,6 +37,8 @@ public class Carreras {
 	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
 	private Boolean salidaLaboral;//bueno,medio,poco requerido
 	
+	private Double costo;
+	
 	@Column(updatable = false)
 	private Date createdAt;
 	private Date updatedAt;
@@ -99,6 +101,14 @@ public class Carreras {
 
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	public Double getCosto() {
+		return costo;
+	}
+
+	public void setCosto(Double costo) {
+		this.costo = costo;
 	}
 	
 }
