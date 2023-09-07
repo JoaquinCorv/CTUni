@@ -16,6 +16,7 @@
 
 <script type="text/javascript" src="js/app.js"></script>
 
+<link rel="icon" href="imagenes/gorra-de-posgrado.png">
 </head>
 
 <body>
