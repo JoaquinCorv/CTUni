@@ -26,6 +26,7 @@ public class Universidades {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(columnDefinition = "TEXT")
 	@NotBlank(message=" Por favor ingresa un nombre")
 	@Size(min=3, max=30, message="Nombre debe ser mayor a 3 caracteres y menor a 30")
 	private String universidadName;
@@ -34,13 +35,20 @@ public class Universidades {
 	@Max(value=5)
 	private int ranking;
 	
+	@Column(columnDefinition = "TEXT")
 	@NotBlank(message=" Por favor ingresa un apellido")
 	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
 	private String publicOrPrivate;
 	
+	@Column(columnDefinition = "TEXT")
 	@NotBlank(message=" Por favor ingresa un apellido")
 	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
 	private String localidad;
+	
+	@Column(columnDefinition = "TEXT")
+	@NotBlank(message=" Por favor ingresa un apellido")
+	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
+	private String direccion;
 	
 	@Column(updatable = false)
 	private Date createdAt;
@@ -64,12 +72,17 @@ public class Universidades {
 		this.carreras = carreras;
 	}
 
-
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
+	}
+	public String getDireccion() {
+		return direccion;
+	}
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 	public String getUniversidadName() {
 		return universidadName;
