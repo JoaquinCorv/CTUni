@@ -16,7 +16,7 @@ header {
 
 .logo {
 	padding-bottom: 10px;
-	padding-left:50px;
+	padding-left:30px;
 }
 
 .logo img {
@@ -29,13 +29,13 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration:none;
 }
 
 .listaPrincipal {
@@ -59,9 +59,9 @@ nav a:hover {
 .listaItem ul {
     display: none;
     position: absolute;
-    background-color: black;
+    background: linear-gradient(rgba(0,47,87,0.75), rgba(0,47,87,0.35));
     border-radius: 10px;
-    box-shadow: 5px 5px #89beff;
+    box-shadow: 5px 5px #0000a0;
     
 }
 
