@@ -18,6 +18,6 @@ public class MainController {
 	
 	@GetMapping("/universidades")
 	public String universidades() {
-		return "universidades.jsp";
+		return "/universidades/universidades.jsp";
 	}
 }
