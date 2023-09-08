@@ -28,10 +28,11 @@
 <header>
 		<div class="container-fluid">
 			<div class="logo">
-				<a href="/"> <img src="./imagenes/logoProyecto.png"
+				<a href="/"> <img src="./imagenes/logo_blanco.png"
 					alt="Logo del Proyecto">
 				</a>
 			</div>
+			
 			<nav>
 				<ul class="listaPrincipal">
 					<li class="listaItem" onclick="menuDesplegable"><a
