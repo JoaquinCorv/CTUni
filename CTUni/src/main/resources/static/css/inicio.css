@@ -3,7 +3,7 @@ body{
 }
 
 header {
-	background: linear-gradient(rgba(0,47,87,1.65), rgba(0,47,87,0.65)), url(./imagenes/fondo.png);
+	background: linear-gradient(rgba(0,47,87,1.65), rgba(0,47,87,0.65)),url(/imagenes/fondo.png);
 	padding-top: 15px;
 	}
 
@@ -18,7 +18,7 @@ header {
 }
 
 .logo img {
-	max-width: 150px;
+	max-width: 120px;
 }
 
 nav {
@@ -51,7 +51,7 @@ nav a:hover {
 .listaItemLink {
     font-size: large;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .listaItem ul {
