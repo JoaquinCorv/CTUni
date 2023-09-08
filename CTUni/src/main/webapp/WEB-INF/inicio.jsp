@@ -32,6 +32,7 @@
 					alt="Logo del Proyecto">
 				</a>
 			</div>
+			
 			<nav>
 				<ul class="listaPrincipal">
 					<li class="listaItem" onclick="menuDesplegable"><a
