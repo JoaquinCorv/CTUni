@@ -28,7 +28,7 @@
 <header>
 		<div class="container-fluid">
 			<div class="logo">
-				<a href="/"> <img src="./imagenes/Logo_blanco.png"
+				<a href="/"> <img src="./imagenes/logo_final.png"
 					alt="Logo del Proyecto">
 				</a>
 			</div>
