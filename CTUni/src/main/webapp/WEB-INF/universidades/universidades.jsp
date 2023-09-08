@@ -13,7 +13,7 @@
 <meta charset="ISO-8859-1">
 <title>Nombre de la Universidad</title>
 <!--Bootstrap-->
-<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">-->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <!--Cambiar para que coincida con tu archivo/estructura de nombres-->
 <link rel="stylesheet" href="/css/universidades.css">
