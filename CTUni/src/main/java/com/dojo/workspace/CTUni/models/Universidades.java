@@ -13,8 +13,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "universidades")
@@ -24,22 +22,18 @@ public class Universidades {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank(message=" Por favor ingresa un nombre")
-	@Size(min=3, max=30, message="Nombre debe ser mayor a 3 caracteres y menor a 30")
+	@Column(columnDefinition = "CHAR(90)")
 	private String universidadName;
 	
 	private int ranking;
 	
-	@NotBlank(message=" Por favor ingresa un apellido")
-	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
+	@Column(columnDefinition = "CHAR(90)")
 	private String publicOrPrivate;
 	
-	@NotBlank(message=" Por favor ingresa un apellido")
-	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
+	@Column(columnDefinition = "CHAR(90)")
 	private String localidad;
 	
-	@NotBlank(message=" Por favor ingresa un apellido")
-	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
+	@Column(columnDefinition = "CHAR(90)")
 	private String direccion;
 	
 	@Column(updatable = false)
