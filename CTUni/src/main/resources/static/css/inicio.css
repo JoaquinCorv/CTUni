@@ -58,8 +58,9 @@ nav a:hover {
     display: none;
     position: absolute;
     background-color: black;
-    border-radius: 10px
+    border-radius: 10px;
     box-shadow: 5px 5px #89beff;
+    
 }
 
 .listaItem:hover ul {
