@@ -36,6 +36,7 @@ nav a {
 
 nav a:hover {
     text-decoration:none;
+    color:#0000a0;
 }
 
 .listaPrincipal {
@@ -54,6 +55,7 @@ nav a:hover {
     font-size: large;
     text-decoration: none;
     color: white;
+    
 }
 
 .listaItem ul {
