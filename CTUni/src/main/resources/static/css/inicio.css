@@ -3,7 +3,7 @@ body{
 }
 
 header {
-	background: linear-gradient(rgba(26, 24, 152, 0.35 ), rgba(0,47,87,0.45)),url(/imagenes/fondo10.jpg.png);
+	background: linear-gradient(rgba(22,13,173,0.35), rgba(22,13,173,0.05 )),url(/imagenes/fondo10.jpg.png);
 	padding-top: 15px;
 	background-size:100% 100%;
 	}
@@ -54,14 +54,14 @@ nav a:hover {
 .listaItemLink {
     font-size: large;
     text-decoration: none;
-    color: white;
+    color:rgba(22,13,173,255);
     
 }
 
 .listaItem ul {
     display: none;
     position: absolute;
-    background: linear-gradient(rgba(26, 24, 152, 0.15 ),rgba(255, 255, 255, 225 ));
+    background: linear-gradient(rgba(22,13,173,0.25),rgba(255, 255, 255, 225 ));
     border-radius: 10px;
     box-shadow: 5px 5px #0000a0;
     
