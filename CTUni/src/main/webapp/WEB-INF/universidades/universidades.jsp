@@ -68,6 +68,11 @@
 		<div class="d-flex justify-content-center pt-2">
 			<p class="nroIngresantes"><ins>Ranking</ins>: a Determinar</p>
 		</div>
+		
+		
+		<div class="text-end">
+			<a href="/comentario/${id}">deja tu opinion</a>
+		</div>
 	</main>
 </body>
 </html>

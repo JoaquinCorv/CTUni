@@ -24,9 +24,6 @@ public class Usuario {
 	@Size(min=3, max=30, message="Nombre debe ser mayor a 3 caracteres y menor a 30")
 	private String nombre;
 	
-	@NotBlank(message=" Por favor ingresa un apellido")
-	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
-	private String apellido;
 	
 	@NotBlank(message=" Por favor ingresa un correo electronico")
 	@Email(message="El correo ingresado no es correcto")
@@ -60,12 +57,7 @@ public class Usuario {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getApellido() {
-		return apellido;
-	}
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
+
 	public String getEmail() {
 		return email;
 	}

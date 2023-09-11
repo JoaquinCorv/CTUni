@@ -13,6 +13,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
 
 @Entity
 @Table(name = "universidades")
@@ -26,6 +28,11 @@ public class Universidades {
 	private String universidadName;
 	
 	private int ranking;
+	
+	@DecimalMin("1.0")
+	@DecimalMax("5.0")
+	private Double rating ;
+	
 	
 	@Column(columnDefinition = "CHAR(90)")
 	private String publicOrPrivate;
@@ -50,6 +57,15 @@ public class Universidades {
 	
 	public Universidades() {
 
+		
+		
+		
+	}
+	public Double getRating() {
+		return rating;
+	}
+	public void setRating(Double rating) {
+		this.rating = rating;
 	}
 	public List<Carreras> getCarreras() {
 		return carreras;

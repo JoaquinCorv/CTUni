@@ -62,7 +62,7 @@ public class usercontroller {
 				resultado )) {
 			Usuario usuarioLog = userServ.encontrarPorEmail(loginuser.getEmail());
 			sesion.setAttribute("userID",usuarioLog.getId());
-			return "redirect:/index";
+			return "redirect:/";
 		}else {
 			viewModel.addAttribute("errorLog", "Por favor intenta de nuevo");
 			viewModel.addAttribute("user", new Usuario());
