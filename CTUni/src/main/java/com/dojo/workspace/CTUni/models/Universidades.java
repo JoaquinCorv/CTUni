@@ -49,7 +49,7 @@ public class Universidades {
 	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(
-      name = "carrera_especifica", 
+      name = "sedes", 
       joinColumns = @JoinColumn(name = "universidades_id"), 
       inverseJoinColumns = @JoinColumn(name = "carreras_id")
   )
