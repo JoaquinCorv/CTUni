@@ -51,9 +51,15 @@
 						</ul></li>
 					<li class="listaItem" onclick="menuDesplegable"><a
 						class="listaItemLink" href="#">Rellenar</a></li>
-					<li class="listaItem"><a class="listaItemLink"
-						href="/CTUniRegister">Login/Register</a></li>
-				</ul>
+				        <li class="listaItem">
+            <a class="listaItemLink" href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
+                <c:choose>
+                    <c:when test="${isLoggedIn}">Cuenta</c:when>
+                    <c:otherwise>Login/Register</c:otherwise>
+                </c:choose>
+            </a>
+
+        </li>
 			</nav>
 		</div>
 	</header>

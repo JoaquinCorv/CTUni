@@ -38,10 +38,30 @@ public class MainController {
 
 
 	
-	@GetMapping("/")
-	public String main(Model viewModel) {
-		return "inicio.jsp";
-	}
+
+    @GetMapping("/")
+    public String main(Model viewModel, HttpSession session) {
+
+        boolean isLoggedIn = (session.getAttribute("userID") != null);
+        viewModel.addAttribute("isLoggedIn", isLoggedIn);
+        return "inicio.jsp";
+    }
+    @GetMapping("/cuenta")
+    public String cuenta(Model model, HttpSession session) {
+        Long userId = (Long) session.getAttribute("userID");
+
+        if (userId == null) {
+
+            return "redirect:/login";
+        }
+
+ 
+        Usuario usuario = userservices.encontrarUserPorId(userId);
+        model.addAttribute("usuario", usuario);
+
+     
+        return "cuenta.jsp"; 
+    }
 	
 	@GetMapping("/carreras")
 	public String carreras() {
