@@ -70,40 +70,26 @@ public class MainController {
 		return "guardados.jsp";
 	}
 
-	// GUARDAR O QUITAR DE GUARDADOS UNA CARRERA
-	@GetMapping("/carreras/{idCarrera}/{idUsuario}/{option}")
-	public String guardarDesguardarCarrera(@PathVariable("idCarrera") Long idCarrera,
-			@PathVariable("idCarrera") Long idUsuario, @PathVariable("option") String option, HttpSession sesion) {
-		// VALIDAR SI LA SESION DEL USUARIO ESTA ACTIVA
-		Long userId = (Long) sesion.getAttribute("userID");
-		if (userId == null) {
-			return "redirect:/CTUniRegister";
-		}
-		Carreras unaCarrera = ctuniServices.unaCarrera(idCarrera);
-		boolean guardarDesguardar = (option.equals("guardar"));
-		Usuario usuario = userservices.encontrarUsuarioPorID(userId);
-
-		ctuniServices.guardarDesguardarCarrera(unaCarrera, usuario, guardarDesguardar);
-
-		return "redirect:/carreras";
-	}
-
+	
 	// GUARDAR O QUITAR DE GUARDADOS UNA UNIVERSIDAD
-	@GetMapping("/universidades/{idUniversidad}/{idUsuario}/{option}")
-	public String guardarDesguardarUniversidad(@PathVariable("idUniversidad") Long idUniversidad,
-			@PathVariable("idUniversidad") Long idUsuario, @PathVariable("option") String option, HttpSession sesion) {
+	@GetMapping("/universidades/{idUni}/{idUsuario}/{opcion}")
+	public String guardarDesguardarUniversidad(Model model, @PathVariable("idUni") Long idUniversidad,
+			@PathVariable("idUsuario") Long idUsuario, @PathVariable("option") String option, HttpSession sesion) {
 		// VALIDAR SI LA SESION DEL USUARIO ESTA ACTIVA
 		Long userId = (Long) sesion.getAttribute("userID");
 		if (userId == null) {
 			return "redirect:/CTUniRegister";
 		}
-		Universidades unaUniversidad = ctuniServices.unaUniversidad(idUniversidad);
+		
+
+		
+		Universidades unaUniversidad = ctuniServices.unauni(idUniversidad);
 		boolean guardarDesguardar = (option.equals("guardar"));
-		Usuario usuario = userservices.encontrarUsuarioPorID(userId);
+		Usuario usuario = userservices.encontrarUserPorId(userId);
+		ctuniServices.guardarDesguardarCarrera(unaUniversidad, usuario, guardarDesguardar);
 
-		ctuniServices.guardarDesguardarUniversidad(unaUniversidad, usuario, guardarDesguardar);
+		return "redirect:/universidades/" + idUniversidad;
 
-		return "redirect:/universidades";
 	}
 
 	@GetMapping("/comentario/{idUni}")

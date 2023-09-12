@@ -68,10 +68,23 @@
 		<div class="d-flex justify-content-center pt-2">
 			<p class="nroIngresantes"><ins>Ranking</ins>: a Determinar</p>
 		</div>
-		
+<c:choose>
+    <c:when test="${ guardaruni.contains(Usuario) }">
+        <a href="/universidades/1/${usuario.id}/noguardar">
+            No Guardar
+        </a>
+    </c:when>
+    <c:otherwise>
+        <a href="/universidades/1/${usuario.id}/guardar">
+            Guardar
+        </a>
+    </c:otherwise>
+</c:choose>
+
+
 		
 		<div class="text-end">
-			<a href="/comentario/${id}">deja tu opinion</a>
+			<a href="/comentario/1">deja tu opinion</a>
 		</div>
 	</main>
 </body>

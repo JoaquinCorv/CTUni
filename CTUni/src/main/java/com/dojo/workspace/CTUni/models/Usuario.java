@@ -1,12 +1,17 @@
 package com.dojo.workspace.CTUni.models;
 
 import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 import jakarta.validation.constraints.Email;
@@ -42,9 +47,31 @@ public class Usuario {
 	private Date createdAt;
 	private Date updatedAt;
 	
+	@ManyToMany(fetch=FetchType.LAZY)
+	@JoinTable(name="guardados",
+	joinColumns= @JoinColumn(name="user_id"),
+	inverseJoinColumns = @JoinColumn(name="universidades_id"))
+	private List<Universidades> guardaruni;
+	
+	
 	public Usuario() {
 
 	}
+	
+	
+	
+	public List<Universidades> getGuardaruni() {
+		return guardaruni;
+	}
+
+
+
+	public void setGuardaruni(List<Universidades> guardaruni) {
+		this.guardaruni = guardaruni;
+	}
+
+
+
 	public Long getId() {
 		return id;
 	}

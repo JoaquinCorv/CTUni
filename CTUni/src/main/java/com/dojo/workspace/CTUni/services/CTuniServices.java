@@ -6,6 +6,7 @@ import com.dojo.workspace.CTUni.repositories.userRepo;
 import org.springframework.stereotype.Service;
 
 import com.dojo.workspace.CTUni.models.Universidades;
+import com.dojo.workspace.CTUni.models.Usuario;
 
 @Service
 public class CTuniServices {
@@ -16,8 +17,8 @@ public class CTuniServices {
         this.CTunirepo = CTunirepo;
         this.userRepo = userRepo;
 }
-    public Universidades obtenerUniversidadesPorId(Long idUniversidades) {
-        return CTunirepo.findById(idUniversidades).orElse(null);
+    public Universidades obtenerUniversidadesPorId(Long iduniversidadName) {
+        return CTunirepo.findById(iduniversidadName).orElse(null);
     }
     
     public boolean UniversidadesExiste(String Universidades) {
@@ -32,10 +33,23 @@ public class CTuniServices {
 		return CTunirepo.save(Universidades);
 	}
     
-	public Double obtenerPromedio(Long id) {
-		return CTunirepo.obtenerPromedioRatings(id).orElse(null);
+	public Double obtenerPromedio(Long iduniversidadName) {
+		return CTunirepo.obtenerPromedioRatings(iduniversidadName).orElse(null);
 	}
     
-    
+	public Universidades unauni(Long iduniversidadName) {
+		return CTunirepo.findById(iduniversidadName).orElse(null);
+	}
+	
+	public void guardarDesguardarCarrera(Universidades Universidades, Usuario usuario, boolean asistencia) {
+		if(asistencia) {
+			Universidades.getGuardaruni().add(usuario);			
+		}else {
+			Universidades.getGuardaruni().remove(usuario);	
+		}
+		CTunirepo.save(Universidades);
+	}
+	
+	
 }
 

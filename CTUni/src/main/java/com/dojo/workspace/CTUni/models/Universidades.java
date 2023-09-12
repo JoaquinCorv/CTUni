@@ -55,7 +55,14 @@ public class Universidades {
       joinColumns = @JoinColumn(name = "universidades_id"), 
       inverseJoinColumns = @JoinColumn(name = "carreras_id")
   )
-  private List<Carreras> carrerasConSedes;
+	private List<Carreras> carrerasConSedes;
+	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "guardados", 
+	joinColumns = @JoinColumn(name = "universidades_id"), 
+	inverseJoinColumns = @JoinColumn(name = "user_id"))
+	private List<Usuario> guardaruni;
+	
 	
 	@OneToMany(mappedBy = "carreras", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Carreras> carrerasDirect;
@@ -63,6 +70,20 @@ public class Universidades {
 	public Universidades() {
 	}
 	
+	
+	
+	public List<Usuario> getGuardaruni() {
+		return guardaruni;
+	}
+
+
+
+	public void setGuardaruni(List<Usuario> guardaruni) {
+		this.guardaruni = guardaruni;
+	}
+
+
+
 	public Double getRating() {
 		return rating;
 	}
