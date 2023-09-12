@@ -9,9 +9,10 @@
 <head>
 <meta charset="ISO-8859-1">
 
-<title>Crea tu libro</title>
+<title>Cuenta de <c:out value="${usuario.nombre}" /></title>
 
-<link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
 
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
@@ -22,16 +23,26 @@
 </head>
 
 <body>
-    <h1>Bienvenido a tu cuenta</h1>
+	<div class="ps-3 pt-3">
+		<h1>Bienvenido a tu cuenta!</h1>
+		<br>
 
-    <c:if test="${not empty usuario}">
-        <p>Nombre de usuario: ${usuario.nombre}</p>
-        <p>Email: ${usuario.email}</p>
-        
-    </c:if>
+		<c:if test="${not empty usuario}">
+			<p>
+				Nombre de usuario:
+				<c:out value="${usuario.nombre}"></c:out>
+			</p>
+			<p>
+				Email:
+				<c:out value="${usuario.email}"></c:out>
+			</p>
+			<br>
 
-    <a href="/">Volver a la página principal</a>
-	
-	 <a href="/logout">cerrar sesion</a>
-    
+		</c:if>
+
+		<a href="/">Volver a la Página Principal</a> <br> <br> 
+		<a href="/guardados">Guardados</a> <br> <br> 
+		<a href="/logout">Cerrar sesión</a>
+	</div>
 </body>
+</html>
