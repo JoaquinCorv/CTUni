@@ -38,8 +38,6 @@ public class Carreras {
 	
 	private Double costo;
 	
-//	('id,'nombre','duracion','costo' ,' plan de estudios')
-	
 	@Column(updatable = false)
 	private Date createdAt;
 	private Date updatedAt;
