@@ -3,6 +3,7 @@ package com.dojo.workspace.CTUni.models;
 import java.sql.Date;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -12,6 +13,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
@@ -53,27 +55,32 @@ public class Universidades {
       joinColumns = @JoinColumn(name = "universidades_id"), 
       inverseJoinColumns = @JoinColumn(name = "carreras_id")
   )
-  private List<Carreras> carreras;
+  private List<Carreras> carrerasConSedes;
 	
-	public Universidades() {
+	@OneToMany(mappedBy = "carreras", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<Carreras> carrerasDirect;
 
-		
-		
-		
+	public Universidades() {
 	}
+	
 	public Double getRating() {
 		return rating;
 	}
 	public void setRating(Double rating) {
 		this.rating = rating;
 	}
-	public List<Carreras> getCarreras() {
-		return carreras;
+	public List<Carreras> getCarrerasConSedes() {
+		return carrerasConSedes;
 	}
-	public void setCarreras(List<Carreras> carreras) {
-		this.carreras = carreras;
+	public void setCarrerasConSedes(List<Carreras> carrerasConSedes) {
+		this.carrerasConSedes = carrerasConSedes;
 	}
-
+	public List<Carreras> getCarrerasDirect() {
+		return carrerasDirect;
+	}
+	public void setCarrerasDirect(List<Carreras> carrerasDirect) {
+		this.carrerasDirect = carrerasDirect;
+	}
 	public Long getId() {
 		return id;
 	}

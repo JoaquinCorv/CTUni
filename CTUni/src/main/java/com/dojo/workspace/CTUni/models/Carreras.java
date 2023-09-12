@@ -12,6 +12,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -54,23 +55,33 @@ public class Carreras {
         inverseJoinColumns = @JoinColumn(name = "carreras_id")
     )     
     private List<Universidades> universidades;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "carreras_id")
+	private Universidades carreras;
+	
 	public Carreras() {
 
 	}
 
-	
 	public String getPlanDeEstudio() {
 		return planDeEstudio;
 	}
-
 
 	public void setPlanDeEstudio(String planDeEstudio) {
 		this.planDeEstudio = planDeEstudio;
 	}
 
-
 	public Long getId() {
 		return id;
+	}
+
+	public Universidades getCarreras() {
+		return carreras;
+	}
+
+	public void setCarreras(Universidades carreras) {
+		this.carreras = carreras;
 	}
 
 	public List<Universidades> getUniversidades() {
