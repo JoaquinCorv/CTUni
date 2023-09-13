@@ -50,16 +50,6 @@ public class Universidades {
 	private Date createdAt;
 	private Date updatedAt;
 	
-
-
-	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(
-      name = "sedes", 
-      joinColumns = @JoinColumn(name = "universidades_id"), 
-      inverseJoinColumns = @JoinColumn(name = "carreras_id")
-  )
-	private List<Carreras> carrerasConSedes;
-	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "guardados", 
 	joinColumns = @JoinColumn(name = "universidades_id"), 
@@ -74,30 +64,9 @@ public class Universidades {
 	public Universidades() {
 	}
 	
-	
-	
-	
-	public List<Carreras> getCarrerasConSedes() {
-		return carrerasConSedes;
-	}
-
-
-
-
-	public void setCarrerasConSedes(List<Carreras> carrerasConSedes) {
-		this.carrerasConSedes = carrerasConSedes;
-	}
-
-
-
-
 	public List<Usuario> getGuardaruni() {
 		return guardaruni;
 	}
-
-
-
-
 	public void setGuardaruni(List<Usuario> guardaruni) {
 		this.guardaruni = guardaruni;
 	}
