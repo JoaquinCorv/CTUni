@@ -17,11 +17,12 @@ header {
 }
 
 .logo img {
-	max-width: 100px;
+	max-width: 110px;
 }
 
 .slogan{
 	color:white;
+	
 }
 nav {
 	display: flex;
@@ -41,6 +42,7 @@ nav a:hover {
 .listaPrincipal {
 	display: flex;
 	justify-content: space-evenly;
+	padding-right: 80px;
 }
 
 .listaItem {
@@ -74,6 +76,7 @@ nav a:hover {
 	display: flex;
 	width: 200px;
 }
+
 
 main {
 	color: black;

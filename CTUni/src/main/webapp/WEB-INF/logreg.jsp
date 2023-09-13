@@ -32,6 +32,10 @@
 					alt="Logo del Proyecto">
 				</a>
 			</div>
+						<div class="slogan">
+			<h1>Camino a Tu Universidad</h1>
+			</div>
+			
 			
 			<nav>
 				<ul class="listaPrincipal">
