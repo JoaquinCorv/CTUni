@@ -43,13 +43,7 @@
 					<li class="listaItem" onclick="menuDesplegable"><a
 						class="listaItemLink" href="#">Universidades</a>
 						<ul class="categorias">
-		<c:forEach var="uni" items="${usuario.guardaruni}">
-                        <li>
-                            <a href="/universidades/${uni.id}">
-                                <c:out value="${uni.universidadName}" />
-                            </a>
-                        </li>
-                    </c:forEach>
+
 							<li><a href="#">NombreUni</a></li>
 							<li><a href="#">NombreUni</a></li>
 						</ul></li>

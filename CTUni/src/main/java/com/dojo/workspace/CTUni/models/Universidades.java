@@ -64,12 +64,9 @@ public class Universidades {
 	private List<Usuario> guardaruni;
 	
 	
-	@OneToMany(mappedBy = "carreras", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private List<Carreras> carrerasDirect;
 
-	@OneToMany(mappedBy = "sedes", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private List<Sedes> sedes;
-
+	 @OneToMany(mappedBy = "universidad", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	    private List<Sedes> sedes;
 
 	public Universidades() {
 	}

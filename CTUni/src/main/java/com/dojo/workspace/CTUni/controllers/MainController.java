@@ -61,7 +61,14 @@ public class MainController {
 	}
 
 	@GetMapping("/universidades")
-	public String universidades() {
+public String universidades(@PathVariable("idUni") Long idUni,Model model) {
+		
+		Universidades universidad = ctuniServices.obtenerUniversidadesPorId(idUni);
+		//Servicio para buscar una universidad por id
+		//agregar la universidad encontrada al modelo
+		model.addAttribute("universidad", universidad);
+		
+		
 		return "/universidades/universidades.jsp";
 	}
 	
