@@ -11,8 +11,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "carreras")
@@ -22,16 +20,17 @@ public class Carreras {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank(message=" Por favor ingresa un nombre")
-	@Size(min=3, max=30, message="Nombre debe ser mayor a 3 caracteres y menor a 30")
+	@Column(columnDefinition = "CHAR(90)")
 	private String carreraName;
 	
-	@NotBlank(message=" Por favor ingresa un apellido")
-	@Size(min=3, max=30, message="Apellido debe ser mayor a 3 caracteres y menor a 30")
+	@Column(columnDefinition = "CHAR(90)")
 	private String duracion;
 	
 	@Column(columnDefinition = "TEXT")
 	private String planDeEstudio;
+	
+	@Column(columnDefinition = "CHAR(90)")
+	private String tipo;
 	
 	private Double costo;
 	
@@ -69,6 +68,14 @@ public class Carreras {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 
 	public String getCarreraName() {
