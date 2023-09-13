@@ -84,8 +84,17 @@ body{
 main {
 	color: black;
 }
-
+.anuncio{
+	float:right;
+	padding: 105px 20px;
+}
 
 .nroIngresantes {
 	font-size: large;
+}
+.carousel-caption{
+    background-color:#000;
+}
+.carousel-caption h5{
+    color:white;
 }
