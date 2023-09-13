@@ -3,6 +3,8 @@ package com.dojo.workspace.CTUni.services;
 import com.dojo.workspace.CTUni.repositories.CTunirepo;
 import com.dojo.workspace.CTUni.repositories.userRepo;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.dojo.workspace.CTUni.models.Universidades;
@@ -20,7 +22,9 @@ public class CTuniServices {
     public Universidades obtenerUniversidadesPorId(Long iduniversidadName) {
         return CTunirepo.findById(iduniversidadName).orElse(null);
     }
-    
+    public List<Universidades> obtenerTodasLasUniversidades() {
+        return CTunirepo.findAll();
+    }
     public boolean UniversidadesExiste(String Universidades) {
         return CTunirepo.existsByUniversidadName(Universidades);
     }
@@ -49,7 +53,10 @@ public class CTuniServices {
 		}
 		CTunirepo.save(Universidades);
 	}
-	
-	
+    public Long restriccionguardado(Long userid) {
+    	
+    	
+    	return CTunirepo.restriccionguardados(userid);
+    }	
 }
 

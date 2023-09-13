@@ -23,13 +23,14 @@
 <link rel="icon" href="imagenes/gorra-de-posgrado.png">
 </head>
 <body>
-	<header>
+<header>
 		<div class="container-fluid">
 			<div class="logo">
-				<a href="/"> <img src="./imagenes/logoProyecto.png"
+				<a href="/"> <img src="./imagenes/logo_blanco.png"
 					alt="Logo del Proyecto">
 				</a>
 			</div>
+			
 			<nav>
 				<ul class="listaPrincipal">
 					<li class="listaItem" onclick="menuDesplegable"><a
@@ -42,15 +43,28 @@
 					<li class="listaItem" onclick="menuDesplegable"><a
 						class="listaItemLink" href="#">Universidades</a>
 						<ul class="categorias">
-							<li><a href="/universidades">NombreUni</a></li>
+									<c:forEach var="uni" items="${universidades}">
+                        <li>
+                            <a href="/universidades/${uni.id}">
+                                <c:out value="${uni.universidadName}" />
+                            </a>
+                        </li>
+                    </c:forEach>
+
 							<li><a href="#">NombreUni</a></li>
 							<li><a href="#">NombreUni</a></li>
 						</ul></li>
 					<li class="listaItem" onclick="menuDesplegable"><a
 						class="listaItemLink" href="#">Rellenar</a></li>
-					<li class="listaItem"><a class="listaItemLink"
-						href="/CTUniRegister">Login/Register</a></li>
-				</ul>
+				        <li class="listaItem">
+            <a class="listaItemLink" href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
+                <c:choose>
+                    <c:when test="${isLoggedIn}">Cuenta</c:when>
+                    <c:otherwise>Login/Register</c:otherwise>
+                </c:choose>
+            </a>
+
+        </li>
 			</nav>
 		</div>
 	</header>

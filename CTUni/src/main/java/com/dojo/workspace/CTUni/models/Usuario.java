@@ -47,6 +47,9 @@ public class Usuario {
 	private Date createdAt;
 	private Date updatedAt;
 	
+	
+	
+	
 	@ManyToMany(fetch=FetchType.LAZY)
 	@JoinTable(name="guardados",
 	joinColumns= @JoinColumn(name="user_id"),
@@ -56,6 +59,12 @@ public class Usuario {
 	public Usuario() {
 
 	}
+	
+	
+	
+
+
+
 	public List<Universidades> getGuardaruni() {
 		return guardaruni;
 	}

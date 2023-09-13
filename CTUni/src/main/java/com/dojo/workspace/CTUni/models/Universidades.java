@@ -3,6 +3,10 @@ package com.dojo.workspace.CTUni.models;
 import java.sql.Date;
 import java.util.List;
 
+
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -46,12 +50,61 @@ public class Universidades {
 	private Date createdAt;
 	private Date updatedAt;
 	
-	@OneToMany(mappedBy = "sedes", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private List<Sedes> sedes;
+
+
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(
+      name = "sedes", 
+      joinColumns = @JoinColumn(name = "universidades_id"), 
+      inverseJoinColumns = @JoinColumn(name = "carreras_id")
+  )
+	private List<Carreras> carrerasConSedes;
+	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "guardados", 
+	joinColumns = @JoinColumn(name = "universidades_id"), 
+	inverseJoinColumns = @JoinColumn(name = "user_id"))
+	private List<Usuario> guardaruni;
+	
+	
+
+	 @OneToMany(mappedBy = "universidad", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	    private List<Sedes> sedes;
 
 	public Universidades() {
 	}
 	
+	
+	
+	
+	public List<Carreras> getCarrerasConSedes() {
+		return carrerasConSedes;
+	}
+
+
+
+
+	public void setCarrerasConSedes(List<Carreras> carrerasConSedes) {
+		this.carrerasConSedes = carrerasConSedes;
+	}
+
+
+
+
+	public List<Usuario> getGuardaruni() {
+		return guardaruni;
+	}
+
+
+
+
+	public void setGuardaruni(List<Usuario> guardaruni) {
+		this.guardaruni = guardaruni;
+	}
+
+
+
+
 	public Double getRating() {
 		return rating;
 	}

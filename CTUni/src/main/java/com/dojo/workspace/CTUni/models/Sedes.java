@@ -36,9 +36,9 @@ public class Sedes {
 	private Date createdAt;
 	private Date updatedAt;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "sedes_id")
-	private Universidades sedes;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "universidad_id")
+    private Universidades universidad;
 	
 	@OneToMany(mappedBy = "carreras", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Carreras> carreras;
@@ -64,11 +64,11 @@ public class Sedes {
 	}
 
 	public Universidades getSedes() {
-		return sedes;
+		return universidad;
 	}
 
 	public void setSedes(Universidades sedes) {
-		this.sedes = sedes;
+		this.universidad = sedes;
 	}
 
 	public String getSedesName() {

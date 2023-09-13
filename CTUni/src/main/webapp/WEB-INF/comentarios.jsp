@@ -22,6 +22,52 @@
 </head>
 
 <body>
+
+<header>
+		<div class="container-fluid">
+			<div class="logo">
+				<a href="/"> <img src="./imagenes/logo_blanco.png"
+					alt="Logo del Proyecto">
+				</a>
+			</div>
+			
+			<nav>
+				<ul class="listaPrincipal">
+					<li class="listaItem" onclick="menuDesplegable"><a
+						class="listaItemLink" href="#">Carreras</a>
+						<ul class="categorias">
+							<li><a href="/carreras">NombreCarrera</a></li>
+							<li><a href="#">NombreCarrera</a></li>
+							<li><a href="#">NombreCarrera</a></li>
+						</ul></li>
+					<li class="listaItem" onclick="menuDesplegable"><a
+						class="listaItemLink" href="#">Universidades</a>
+						<ul class="categorias">
+									<c:forEach var="uni" items="${universidades}">
+                        <li>
+                            <a href="/universidades/${uni.id}">
+                                <c:out value="${uni.universidadName}" />
+                            </a>
+                        </li>
+                    </c:forEach>
+
+							<li><a href="#">NombreUni</a></li>
+							<li><a href="#">NombreUni</a></li>
+						</ul></li>
+					<li class="listaItem" onclick="menuDesplegable"><a
+						class="listaItemLink" href="#">Rellenar</a></li>
+				        <li class="listaItem">
+            <a class="listaItemLink" href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
+                <c:choose>
+                    <c:when test="${isLoggedIn}">Cuenta</c:when>
+                    <c:otherwise>Login/Register</c:otherwise>
+                </c:choose>
+            </a>
+
+        </li>
+			</nav>
+		</div>
+	</header>
     <form:form method="POST" action="/comentario/${universidad.id}"
                modelAttribute="newcomment"> 
 			<form:input type="hidden" path="autor" value="${userId}" />
