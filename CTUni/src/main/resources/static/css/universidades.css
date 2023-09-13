@@ -1,12 +1,11 @@
 @charset "UTF-8";
 body{
-	background-color:white;
+	background: linear-gradient(to right,#33b7e2,#5671b9,#a04693,#dc1978);
 }
 
 header {
-	background: linear-gradient(rgba(0,47,87,1.65), rgba(0,47,87,0.65)),url(/imagenes/fotoProvicional.jpeg);
+	background-color:#29248C ;
 	padding-top: 20px;
-	background-size: 100% 10%;
 }
 
 .container-fluid {
