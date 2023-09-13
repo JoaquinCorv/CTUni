@@ -22,5 +22,8 @@ public interface CTunirepo extends CrudRepository<Universidades, Long> {
 	@Query(value="SELECT AVG(rating) FROM comentarios \r\n"
 			+ "WHERE Universidades_id= :iduniversidadName", nativeQuery=true)
 	Optional<Double> obtenerPromedioRatings(Long iduniversidadName);
+	
+	@Query(value="SELECT COUNT(*) FROM guardados WHERE user_id = :userid", nativeQuery=true)
+	Long restriccionguardados(Long userid);
 }
 
