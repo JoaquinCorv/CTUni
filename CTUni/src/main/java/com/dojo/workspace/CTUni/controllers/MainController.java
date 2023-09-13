@@ -93,8 +93,11 @@ public class MainController {
 		
 	    List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 	    model.addAttribute("universidades", universidades);
+	    List<Comentarios> comentarios = commentService.obtenerTodasLasUniversidades();
+	    model.addAttribute("comentarios", comentarios);
 		
-		return "/universidades/universidades.jsp";
+	    
+	    return "/universidades/universidades.jsp";
 	}
 	
 	@GetMapping("/guardados")

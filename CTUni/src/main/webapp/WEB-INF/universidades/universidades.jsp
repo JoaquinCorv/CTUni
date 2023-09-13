@@ -92,6 +92,8 @@
 		<div class="d-flex justify-content-center pt-2">
 			<p class="nroIngresantes"><ins>Ranking</ins>:${universidad.ranking}</p>
 		</div>
+		
+		
 <c:choose>
     <c:when test="${ guardaruni.contains(Usuario) }">
         <a href="/universidades/noguardar/${universidad.id}">
@@ -110,6 +112,18 @@
 		<div class="text-end">
 			<a href="/comentario/${universidad.id}">deja tu opinion</a>
 		</div>
+<c:forEach var="comentario" items="${comentarios}">
+    <c:if test="${comentario.universidades.id == universidad.id}">
+        <li>
+            <c:out value="${comentario.autor.nombre}" /> <!-- Accede al atributo 'nombre' del objeto 'autor' -->
+            <c:out value="${comentario.rating}" />
+            <br>
+            <c:out value="${comentario.comentario}" />
+        </li>
+    </c:if>
+</c:forEach>
+
+	
 	</main>
 </body>
 </html>
