@@ -1,6 +1,7 @@
 package com.dojo.workspace.CTUni.models;
 
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,6 +10,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
@@ -39,6 +42,8 @@ public class Comentarios {
 	private Date updatedAt;
 
 	
+
+	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_id")
 	private Usuario autor;
@@ -59,6 +64,9 @@ public class Comentarios {
 	}
 
 	
+	
+
+
 	public Universidades getUniversidades() {
 		return Universidades;
 	}

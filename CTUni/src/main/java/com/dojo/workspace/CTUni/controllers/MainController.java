@@ -65,45 +65,53 @@ public class MainController {
 		return "/universidades/universidades.jsp";
 	}
 	
+	@GetMapping("/universidades/{idUni}")
+	public String universidadesc(@PathVariable("idUni") Long idUni,Model model) {
+		
+		Universidades universidad = ctuniServices.obtenerUniversidadesPorId(idUni);
+		//Servicio para buscar una universidad por id
+		//agregar la universidad encontrada al modelo
+		model.addAttribute("universidad", universidad);
+		
+		
+		return "/universidades/universidades.jsp";
+	}
+	
 	@GetMapping("/guardados")
-	public String guardados() {
+	public String guardados(Model model, HttpSession sesion) {
+		
+		Long userId = (Long) sesion.getAttribute("userID");
+		if (userId == null) {
+			return "redirect:/CTUniRegister";
+		}
+		Usuario usuario = userservices.encontrarUserPorId(userId);
+		model.addAttribute("usuario", usuario);
+		
+		
+		
 		return "guardados.jsp";
 	}
 
-	// GUARDAR O QUITAR DE GUARDADOS UNA CARRERA
-	@GetMapping("/carreras/{idCarrera}/{idUsuario}/{option}")
-	public String guardarDesguardarCarrera(@PathVariable("idCarrera") Long idCarrera,
-			@PathVariable("idCarrera") Long idUsuario, @PathVariable("option") String option, HttpSession sesion) {
-		// VALIDAR SI LA SESION DEL USUARIO ESTA ACTIVA
-		Long userId = (Long) sesion.getAttribute("userID");
-		if (userId == null) {
-			return "redirect:/CTUniRegister";
-		}
-		Carreras unaCarrera = ctuniServices.unaCarrera(idCarrera);
-		boolean guardarDesguardar = (option.equals("guardar"));
-		Usuario usuario = userservices.encontrarUsuarioPorID(userId);
-
-		ctuniServices.guardarDesguardarCarrera(unaCarrera, usuario, guardarDesguardar);
-
-		return "redirect:/carreras";
-	}
-
+	
 	// GUARDAR O QUITAR DE GUARDADOS UNA UNIVERSIDAD
-	@GetMapping("/universidades/{idUniversidad}/{idUsuario}/{option}")
-	public String guardarDesguardarUniversidad(@PathVariable("idUniversidad") Long idUniversidad,
-			@PathVariable("idUniversidad") Long idUsuario, @PathVariable("option") String option, HttpSession sesion) {
+	@GetMapping("/universidades/{opcion}/{idUni}")
+	public String guardarDesguardarUniversidad(Model model, @PathVariable("idUni") Long idUniversidad,
+			@PathVariable("opcion") String opcion, HttpSession sesion) {
 		// VALIDAR SI LA SESION DEL USUARIO ESTA ACTIVA
 		Long userId = (Long) sesion.getAttribute("userID");
 		if (userId == null) {
 			return "redirect:/CTUniRegister";
 		}
-		Universidades unaUniversidad = ctuniServices.unaUniversidad(idUniversidad);
-		boolean guardarDesguardar = (option.equals("guardar"));
-		Usuario usuario = userservices.encontrarUsuarioPorID(userId);
+		
 
-		ctuniServices.guardarDesguardarUniversidad(unaUniversidad, usuario, guardarDesguardar);
+		
+		Universidades unaUniversidad = ctuniServices.unauni(idUniversidad);
+		boolean guardarDesguardar = (opcion.equals("guardar"));
+		Usuario usuario = userservices.encontrarUserPorId(userId);
+		ctuniServices.guardarDesguardarCarrera(unaUniversidad, usuario, guardarDesguardar);
 
-		return "redirect:/universidades";
+		return "redirect:/universidades/" + idUniversidad;
+
 	}
 
 	@GetMapping("/comentario/{idUni}")

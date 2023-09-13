@@ -22,5 +22,17 @@
 </head>
 <body>
 
+
+							<c:forEach var="uni" items="${usuario.guardaruni}">
+                        <li>
+                            <a href="/universidades/${uni.id}">
+                                <c:out value="${uni.universidadName}" />
+                            </a>
+                        </li>
+                    </c:forEach>
+
+
+
+
 </body>
 </html>

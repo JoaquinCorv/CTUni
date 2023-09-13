@@ -1,4 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!-- c:out ; c:forEach etc. -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!--Formateo fechas (date)-->
@@ -7,6 +6,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!--Para errores de renderizado en rutas PUT-->
 <%@ page isErrorPage="true"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +23,8 @@
 </head>
 <body>
 <header>
+
+
 		<div class="container-fluid">
 			<div class="logo">
 				<a href="/"> <img src="./imagenes/Logo_azul.png"
@@ -40,7 +43,13 @@
 					<li class="listaItem" onclick="menuDesplegable"><a
 						class="listaItemLink" href="#">Universidades</a>
 						<ul class="categorias">
-							<li><a href="/universidades">NombreUni</a></li>
+		<c:forEach var="uni" items="${usuario.guardaruni}">
+                        <li>
+                            <a href="/universidades/${uni.id}">
+                                <c:out value="${uni.universidadName}" />
+                            </a>
+                        </li>
+                    </c:forEach>
 							<li><a href="#">NombreUni</a></li>
 							<li><a href="#">NombreUni</a></li>
 						</ul></li>
@@ -53,25 +62,43 @@
 		</div>
 	</header>
 	<main>
+		<h1>
+		Bienvenid@
+		<c:out value="${usuario.autor }"></c:out>
+	</h1>
+	
 		<div class="d-flex justify-content-center pt-5">
-			<h1>Nombre de la Universidad</h1>
+			<h1>${universidad.universidadName}</h1>
 		</div>
 		<br>
 		<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes"><ins>Localidad</ins>: DeterminarLocalidad</p>
+			<p class="nroIngresantes"><ins>Localidad</ins>: ${universidad.localidad }</p>
 		</div>
 		<br>
 		<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes"><ins>Instituci&oacuten:</ins> P&uacuteblica-Privada</p>
+			<p class="nroIngresantes"><ins>Institución:</ins> </p>
 		</div>
 		<br>
 		<div class="d-flex justify-content-center pt-2">
 			<p class="nroIngresantes"><ins>Ranking</ins>: a Determinar</p>
 		</div>
-		
+<c:choose>
+    <c:when test="${ guardaruni.contains(Usuario) }">
+        <a href="/universidades/noguardar/${universidad.id}">
+            No Guardar
+        </a>
+    </c:when>
+    <c:otherwise>
+        <a href="/universidades/guardar/${universidad.id}">
+            Guardar
+        </a>
+    </c:otherwise>
+</c:choose>
+
+
 		
 		<div class="text-end">
-			<a href="/comentario/${id}">deja tu opinion</a>
+			<a href="/comentario/">deja tu opinion</a>
 		</div>
 	</main>
 </body>
