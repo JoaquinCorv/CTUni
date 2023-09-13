@@ -31,6 +31,10 @@
 				</a>
 			</div>
 			
+			<div class="slogan">
+			<h1>Camino a Tu Universidad</h1>
+			</div>
+			
 			<nav>
 				<ul class="listaPrincipal">
 					<li class="listaItem" onclick="menuDesplegable"><a
@@ -75,12 +79,12 @@
 			</div>
 			<br>
 			<div class="d-flex justify-content-center pt-2">
-				<p class="nroIngresantes"><ins>Número de Ingresantes</ins>:
+				<p class="nroIngresantes"><ins>Nï¿½mero de Ingresantes</ins>:
 					insertarNroIngresantes</p>
 			</div>
 			<br>
 			<div class="d-flex justify-content-center pt-2">
-				<p class="nroIngresantes"><ins>Duración</ins>: insertarCantidadAños</p>
+				<p class="nroIngresantes"><ins>Duraciï¿½n</ins>: insertarCantidadAï¿½os</p>
 			</div>
 			<br>
 			<div class="d-flex justify-content-center pt-2">
