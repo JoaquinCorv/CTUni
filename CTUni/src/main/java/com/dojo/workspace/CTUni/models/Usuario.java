@@ -53,25 +53,15 @@ public class Usuario {
 	inverseJoinColumns = @JoinColumn(name="universidades_id"))
 	private List<Universidades> guardaruni;
 	
-	
 	public Usuario() {
 
 	}
-	
-	
-	
 	public List<Universidades> getGuardaruni() {
 		return guardaruni;
 	}
-
-
-
 	public void setGuardaruni(List<Universidades> guardaruni) {
 		this.guardaruni = guardaruni;
 	}
-
-
-
 	public Long getId() {
 		return id;
 	}

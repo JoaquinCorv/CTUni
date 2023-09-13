@@ -2,6 +2,8 @@ package com.dojo.workspace.CTUni.models;
 
 import java.sql.Date;
 import java.util.List;
+
+
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
@@ -49,6 +51,7 @@ public class Universidades {
 	private Date updatedAt;
 	
 
+
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(
       name = "sedes", 
@@ -71,20 +74,6 @@ public class Universidades {
 	public Universidades() {
 	}
 	
-	
-	
-	public List<Usuario> getGuardaruni() {
-		return guardaruni;
-	}
-
-
-
-	public void setGuardaruni(List<Usuario> guardaruni) {
-		this.guardaruni = guardaruni;
-	}
-
-
-
 	public Double getRating() {
 		return rating;
 	}
@@ -149,5 +138,4 @@ public class Universidades {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-
 }
