@@ -32,7 +32,7 @@ public class Carreras {
 	@Column(columnDefinition = "CHAR(90)")
 	private String tipo;
 	
-	private Double costo;
+	private String costo;
 	
 	@Column(updatable = false)
 	private Date createdAt;
@@ -110,11 +110,11 @@ public class Carreras {
 		this.updatedAt = updatedAt;
 	}
 
-	public Double getCosto() {
+	public String getCosto() {
 		return costo;
 	}
 
-	public void setCosto(Double costo) {
+	public void setCosto(String costo) {
 		this.costo = costo;
 	}
 }
