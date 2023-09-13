@@ -74,6 +74,37 @@ public class Universidades {
 	public Universidades() {
 	}
 	
+	
+	
+	
+	public List<Carreras> getCarrerasConSedes() {
+		return carrerasConSedes;
+	}
+
+
+
+
+	public void setCarrerasConSedes(List<Carreras> carrerasConSedes) {
+		this.carrerasConSedes = carrerasConSedes;
+	}
+
+
+
+
+	public List<Usuario> getGuardaruni() {
+		return guardaruni;
+	}
+
+
+
+
+	public void setGuardaruni(List<Usuario> guardaruni) {
+		this.guardaruni = guardaruni;
+	}
+
+
+
+
 	public Double getRating() {
 		return rating;
 	}
