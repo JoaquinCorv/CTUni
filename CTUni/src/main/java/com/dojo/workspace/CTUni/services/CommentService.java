@@ -13,11 +13,11 @@ import com.dojo.workspace.CTUni.repositories.CTunirepo;
 public class CommentService {
 
     private final comentariorepo comentariorepo;
-    private final CTunirepo CTunirepo;
+   
     
     
-    public CommentService(comentariorepo cRe, CTunirepo CTunirepo) {
-        this.CTunirepo= CTunirepo;
+    public CommentService(comentariorepo cRe) {
+        
     	this.comentariorepo = cRe;
     }
 
@@ -25,6 +25,10 @@ public class CommentService {
         return comentariorepo.save(comentario);
     }
 
+    public List<Comentarios> obtenerTodasLasUniversidades() {
+        return comentariorepo.findAll();
+    }
+    
     public Long restriccioncomentario(Long userid) {
     	
     	

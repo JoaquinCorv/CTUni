@@ -17,11 +17,12 @@ header {
 }
 
 .logo img {
-	max-width: 100px;
+	max-width: 110px;
 }
 
 .slogan{
 	color:white;
+	
 }
 nav {
 	display: flex;
@@ -41,6 +42,7 @@ nav a:hover {
 .listaPrincipal {
 	display: flex;
 	justify-content: space-evenly;
+	padding-right: 80px;
 }
 
 .listaItem {
@@ -75,14 +77,24 @@ nav a:hover {
 	width: 200px;
 }
 
+body{
+	background: linear-gradient(to right,#33b7e2,#5671b9,#a04693,#dc1978);
+}
+
 main {
 	color: black;
 }
-
-h1 {
-	font-weight: bold;
+.anuncio{
+	float:right;
+	padding: 105px 20px;
 }
 
 .nroIngresantes {
 	font-size: large;
+}
+.carousel-caption{
+    background-color:#000;
+}
+.carousel-caption h5{
+    color:white;
 }

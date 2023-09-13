@@ -74,27 +74,80 @@
 	</header>
 	<main>
 	<section>
-			<div class="d-flex justify-content-center pt-4">
+			<div class="d-inline-block p-5 pt-5">
 				<h1>Nombre de la Carrera</h1>
 			</div>
+
+			<div class="anuncio">
+			  <p class="text-right">Aca van los anuncios</p>
+			</div>
+
 			<br>
-			<div class="d-flex justify-content-center pt-2">
+			<div class="d-inline-block p-5 pt-2">
 				<p class="nroIngresantes"><ins>N�mero de Ingresantes</ins>:
 					insertarNroIngresantes</p>
 			</div>
 			<br>
-			<div class="d-flex justify-content-center pt-2">
+			<div class="d-inline-block p-5 pt-2">
 				<p class="nroIngresantes"><ins>Duraci�n</ins>: insertarCantidadA�os</p>
 			</div>
 			<br>
-			<div class="d-flex justify-content-center pt-2">
+			<div class="d-inline-block p-5 pt-2">
 				<p class="nroIngresantes"><ins>Salida Laboral</ins>: insertarSalidaLaboral</p>
 			</div>
+			
+			<div class="anuncio">
+			  <p class="text-right">Aca van los anuncios</p>
+			</div>
+			
 			<br>
-			<div class="d-flex justify-content-center pt-2">
+			<div class="d-inline-block p-5 pt-2">
 				<p class="nroIngresantes"><ins>Costo</ins>: $xCantidad-Gratuita</p>
 			</div>
 		</section>
+		<footer>
+			<div id="carouselExampleCaptions" class="carousel slide w-75  mt-2">
+        <div class="carousel-indicators ">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="container-fluid ">
+            <div class="carousel-inner"  style="height: 30rem;">
+                <div class="carousel-item active">
+                  <img src="./UCA.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 h-25">
+                    <h5>ejemplos</h5>
+                    <p>Aca van imagenes relacionadas con la Carrera</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="src/main/resources/static/css/imagenes/fotoProvicional.jpeg" class="d-block w-100" alt="auto">
+                  <div class="carousel-caption d-none d-md-block opacity-50">
+                    <h5>Ranking 2</h5>
+                    <p>Aca van imagenes relacionadas con la Carrera</p>
+                  </div>
+                </div>
+                
+                <div class="carousel-item">
+                  <img src="./UCA.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 ">
+                    <h5>Ranking 3</h5>
+                    <p>Aca van imagenes relacionadas con la Carrera</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+        </div>
+		</footer>
 	</main>
 </body>
 </html>
