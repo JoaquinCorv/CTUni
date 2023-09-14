@@ -4,3 +4,19 @@
 #encabezado h2{
 	color:white;
 }
+#carousel-ads-1{
+	 width: 20%;
+}
+#carousel-ads-1 img{
+	 width: 100%;
+}
+#fondodepalabra{
+	background-color:black;
+	margin:0;
+	padding:0;
+	width:80%;
+}
+.list-group p{
+	margin-left:35%;
+	margin-right:25%;
+}
