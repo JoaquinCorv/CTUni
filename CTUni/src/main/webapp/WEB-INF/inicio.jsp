@@ -145,10 +145,30 @@
         </div>
 		</main>
 		<footer>
+		<div class="list-group">
 		<div class="row">
-		<p>integrantes</p>
-		<div class="col-3">otros apartados</div>
-		<div class="col-3">otros apartados</div>
+		<div class="col-4">
+		<p>
+		CTUNI
+		Diseñado y construido con todo el amor del mundo por el equipo
+		de Camino a Tu Universidad.</p></div>
+		<div class="col-4">
+		<p>
+		ENLACES
+		Inicio
+		Acerca de nosotros
+		Universidades
+		Carreras
+		Registro
+		Cuenta</p></div>
+		<div class="col-4 ">
+		<p>
+		Integrantes
+		Ailin Lell.
+		Luciano Altamirano.
+		Joaquín Corvalán.
+		Fancisco Encalada.
+		Tomás Petrucci.</p></div>
 		</div>
 		</div>
 		</footer>
