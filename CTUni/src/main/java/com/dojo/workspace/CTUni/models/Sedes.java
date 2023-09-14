@@ -32,6 +32,12 @@ public class Sedes {
 	@Column(columnDefinition = "CHAR(90)")
 	private String direccion;
 	
+	@Column(columnDefinition = "CHAR(90)")
+	private String contactoGmail;
+	
+	@Column(columnDefinition = "CHAR(90)")
+	private String contactoTelefono;
+	
 	@Column(updatable = false)
 	private Date createdAt;
 	private Date updatedAt;
@@ -53,6 +59,30 @@ public class Sedes {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getContactoGmail() {
+		return contactoGmail;
+	}
+
+	public void setContactoGmail(String contactoGmail) {
+		this.contactoGmail = contactoGmail;
+	}
+
+	public String getContactoTelefono() {
+		return contactoTelefono;
+	}
+
+	public void setContactoTelefono(String contactoTelefono) {
+		this.contactoTelefono = contactoTelefono;
+	}
+
+	public Universidades getUniversidad() {
+		return universidad;
+	}
+
+	public void setUniversidad(Universidades universidad) {
+		this.universidad = universidad;
 	}
 
 	public List<Carreras> getCarreras() {
