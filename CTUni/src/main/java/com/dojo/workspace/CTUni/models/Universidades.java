@@ -46,6 +46,7 @@ public class Universidades {
 	@Column(columnDefinition = "CHAR(90)")
 	private String direccion;
 	
+	@Column(columnDefinition = "CHAR(90)")
 	private String cuotaDeIngreso;
 	
 	@Column(updatable = false)
