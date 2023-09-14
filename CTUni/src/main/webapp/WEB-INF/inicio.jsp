@@ -13,6 +13,7 @@
 
 <link rel="stylesheet"
 	href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="./bootstrap.min.css">
 
 
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
