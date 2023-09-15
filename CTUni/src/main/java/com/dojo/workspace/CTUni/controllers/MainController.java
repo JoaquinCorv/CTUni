@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.dojo.workspace.CTUni.models.Carreras;
 import com.dojo.workspace.CTUni.models.Comentarios;
 import com.dojo.workspace.CTUni.models.Universidades;
 import com.dojo.workspace.CTUni.models.Usuario;
@@ -45,7 +44,12 @@ public class MainController {
 	    return "inicio.jsp";
 	}
 
-
+	@GetMapping("/acercaDeNosotros")
+	public String nosotros(Model viewModel){
+		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
+        viewModel.addAttribute("universidades", universidades);
+		return "/universidades/Nosotros.jsp";
+	}
 
 	@GetMapping("/cuenta")
 	public String cuenta(Model model, HttpSession session) {

@@ -9,11 +9,11 @@
 <head>
 <meta charset="ISO-8859-1">
 
-<title>login and register</title>
+<title>Acerca de Nosotros</title>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <link rel="stylesheet" href="css/logreg.css">
-
+<link rel="stylesheet" href="css/Nosotros.css">
 <script type="text/javascript" src="js/app.js"></script>
 
 <link rel="icon" href="imagenes/gorra-de-posgrado.png">
@@ -40,7 +40,7 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" href="/acercaDeNosotros">Acerca de nosotros</a>
+                        <a class="nav-link" href="#">Acerca de nosotros</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -77,68 +77,51 @@
                   </div>
 		</div>
 	</header>
-
-<div class="grupo">
-    <h2>Registrate</h2>
-    <form:form class="border p-3 pt-0 pb-0" method="POST" action="/registration" modelAttribute="user">
-        <div class="form-group row mb-1">
-            <form:label path="nombre">Name:
-                <form:errors path="nombre" cssClass="text-danger" />
-            </form:label>
-            <form:input type="text" path="nombre" />
-        </div>
-        <div class="form-group row mb-1">
-            <form:label path="email">Email:
-                <form:errors path="email" cssClass="text-danger" />
-            </form:label>
-            <form:input type="email" path="email" />
-        </div>
-        <div class="form-group row mb-1">
-            <form:label path="password">Password:
-                <form:errors path="password" cssClass="text-danger" />
-            </form:label>
-            <form:password path="password" />
-        </div>
-        <div class="form-group row mb-3">
-            <form:label path="passwordConfirmation">Password Confirmation:
-                <form:errors path="passwordConfirmation" cssClass="text-danger" />
-            </form:label>
-            <form:password path="passwordConfirmation" />
-        </div>
-        <input type="submit" value="Register!" />
-    </form:form>
-    <p class="text-success">
-        <c:out value="${registro }"></c:out>
-    </p>
-</div>
-
-<div class="grupo">
-    <h2>Inicia sesion</h2>
-    <form:form class="border p-3 pt-0 pb-0" method="POST" action="/login" modelAttribute="login">
-        <div class="form-group row mb-1">
-            <form:label path="email">Email:
-                <form:errors path="email" cssClass="text-danger" />
-            </form:label>
-            <form:input type="email" path="email" />
-        </div>
-        <div class="form-group row mb-3">
-            <form:label path="password">Password:
-                <form:errors path="password" cssClass="text-danger" />
-            </form:label>
-            <form:password path="password" />
-        </div>
-        <input type="submit" value="Login!" />
-    </form:form>
-</div>
-
+	
+	<footer>
+	<div class="cuerpo">
+		<h2>¿Te has preguntado qué estudiar y dónde?</h2>
 		
-
-
-
-
-
-
-
+		<h4>En nuestra Página web te ayudaremos a elegir una carrera conforme con lo que estas buscando.</h4>
+		
+		<p>Para eso te brindaremos:</p>
+		<ul>
+		<li>Universidades de tu provincia y sus carreras.</li>
+		<li>El rainking de universidades en la provincia de Buenos Aries.</li>
+		<li>Un apartado de universidades destacadas.</li>
+		<li>Comentarios y puntajes de cada universidad.</li>
+		</ul>
+		<h6>Si sos un usuario registrado tambien podes comentar y dar una puntuacion a las universidades.</h6>
+	</div>
+	<br>
+		
+		<div class="list-group">
+		<div class="row">
+		<div class="col-4">
+		<p>
+		CTUNI
+		Diseñado y construido con todo el amor del mundo por el equipo
+		de Camino a Tu Universidad.</p></div>
+		<div class="col-4">
+		<p>
+		ENLACES
+		Inicio
+		Acerca de nosotros
+		Universidades
+		Carreras
+		Registro
+		Cuenta</p></div>
+		<div class="col-4 ">
+		<p>
+		Integrantes
+		Ailin Lell.
+		Luciano Altamirano.
+		Joaquín Corvalán.
+		Fancisco Encalada.
+		Tomás Petrucci.</p></div>
+		</div>
+		</div>
+		</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 </body>
