@@ -30,6 +30,8 @@ public class Universidades {
 	@Column(columnDefinition = "CHAR(90)")
 	private String universidadName;
 	
+	private String siglas;
+	
 	private int ranking;
 	
 	@DecimalMin("1.0")
@@ -67,6 +69,16 @@ public class Universidades {
 	public Universidades() {
 	}
 	
+	public String getSiglas() {
+		return siglas;
+	}
+
+	public void setSiglas(String siglas) {
+		this.siglas = siglas;
+	}
+
+
+
 	public List<Usuario> getGuardaruni() {
 		return guardaruni;
 	}
