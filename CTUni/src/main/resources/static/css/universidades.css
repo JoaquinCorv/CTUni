@@ -1,3 +1,10 @@
 #encabezado{
     background-color: #29248C;
 }
+.guardar img{
+	width:5%;
+	 border-radius: 10px;
+}
+.checkbox:checked ~.a{
+	display: none;
+}

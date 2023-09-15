@@ -104,19 +104,21 @@
 		</div>
 		
 		
-		<c:choose>
-		    <c:when test="${ guardaruni.contains(Usuario) }">
-		        <a href="/universidades/noguardar/${universidad.id}">
-		            No Guardar
-		        </a>
-		    </c:when>
-		    <c:otherwise>
-		        <a href="/universidades/guardar/${universidad.id}">
-		            Guardar
-		        </a>
-		    </c:otherwise>
-		</c:choose>
-
+			<c:choose>
+			    <c:when test="${ guardaruni.contains(Usuario) }">
+			        <a href="/universidades/noguardar/${universidad.id}">
+			            No Guardar
+			        </a>
+			    </c:when>
+			    <c:otherwise>
+			    <input class="checkbox" type="checkbox">
+			        <a href="/universidades/guardar/${universidad.id}">
+			            <div class="guardar">
+							<img class="logoguardar" src="/imagenes/el-logo.png" width="130"></div>
+			        </a>
+			    </c:otherwise>
+			</c:choose>
+		
 
 		
 		<div>
