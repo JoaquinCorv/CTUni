@@ -208,126 +208,126 @@
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/ucema.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 14</h5>
                     <p>UCEMA-Universidad del CEMA.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/uai.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 15</h5>
                     <p>UAI-Universidad Abierta Interamericana.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/Hospital.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 16</h5>
                     <p>IUHIBA-Instituto Universitario del Hospital Italiano.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/universidad-favaloro.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 17</h5>
                     <p>UF-Universidad Favaloro.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/cemic.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 18</h5>
                     <p>IUC-Instituto Universitario CEMIC.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/Maimonides.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 19</h5>
                     <p>UMAI-Universidad Maimónides.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/KENNEDY.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 20</h5>
                     <p>UK-Universidad Argentina John F Kennedy.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/ceunib.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 21</h5>
                     <p>CEUNIB-Instituto Universitario de Ciencias de la Salud.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/caece.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 22</h5>
                     <p>CAECE-Universidad CAECE.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/artes.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 23</h5>
                     <p>UNA-Universidad Nacional de las Artes.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/UNIPE.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 24</h5>
                     <p>UNIPE-Universidad Pedagógica Nacional Argentina.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/ISALUD.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 25</h5>
                     <p>ISALUD-Universidad Isalud.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/ESEADE.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 26</h5>
                     <p>ESEADE-Escuela de Economía y Administración de Empresas.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/Museo.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 27</h5>
                     <p>UMSA-Universidad del Museo Social Argentino.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/Flores.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 28</h5>
                     <p>UFLO-Universidad de Flores.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/udemm.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 29</h5>
                     <p>UDEMM-Universidad de la Marina Mercante.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/cine.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 30</h5>
                     <p>UCINE-Universidad del Cine.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/idea.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 31</h5>
                     <p>IDEA-Instituto para el Desarrollo Empresarial de la Argentina.</p>
