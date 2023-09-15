@@ -1,60 +1,23 @@
 
 
-body {
-  display: flex;
+body .grupo{
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-image: url(../imagenes/libros.jpg);
 
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   background-color: #29248C ;
-  color: #fff;
-  padding: 30px ;
 }
 
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.container-fluid{
-	display:flex;
-    justify-content: space-evenly;
-	
-}
-
-.logo img {
-  max-width: 100px;
-}
-
-.slogan{
-	padding:10px;
-}
   
 nav{
 	display:flex;
-	gap:20px;
 }  
   
-nav a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  justify-content: center;
-}
 
-nav a:hover {
-  text-decoration: underline;
-}
 
   
 .grupo {
@@ -62,85 +25,26 @@ nav a:hover {
   padding: 30px;
   border: 2px solid #007bff;
   border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  margin: 30px auto 15px; /* arreglado */
+  margin-top: 2% ; /* arreglado */
+  margin-left:10%;
+  display:inline-block;
+  width:25%;
 }
 
 .grupo h2 {
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
-}
+  color:black;
+  display:block; 
+  }
 
 
 
-.form-group {
-  margin-bottom: 20px;
-}
 
 label {
   font-weight: bold;
   display: block; 
-}
-
-
-h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-
-form {
-  margin-top: 10px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  font-weight: bold;
-}
-
-.listaNav{
-	padding-top: 12px;
-	padding-right: 30px;
-	justify-content: space-evenly;
-	list-style-type: none;
-    margin: 0;
-}
-.listaItem{
-	list-style: none;
-	padding: 15px;
-    position: relative;
-    cursor: pointer;
-}
-
-.listaItemLink{
-	font-size: large;
-	text-decoration: none;
-	color: white;
-}
-.listaItem ul{
-	display: none;
-    position: absolute;
-    background-color: rgb(192, 192, 192);
-    border-radius: 0 0 5px 5px;
-}
-
-.listaPrincipal{
-	display:flex;
-}
-
-.listaItem:hover ul {
-    display: block;
-}
-.listaItem:hover ul li{
-	list-style-type: none;
-    padding:10px;
-    display: flex;
-    padding: 10px;
-    width:400px;
 }
 
 input[type="submit"] {
@@ -175,45 +79,3 @@ input[type="submit"]:hover {
 }
 
 
-@media (max-width: 768px) {
-  body {
-    justify-content: flex-start;
-    padding: 20px;
-  }
-
-  header {
-    padding: 10px 0;
-  }
-
-  .container {
-    flex-direction: column;
-  }
-
-  .logo img {
-    max-width: 800px;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .col-4 {
-    margin: 20px 0;
-    padding: 20px;
-  }
-}
-
-
-@media (max-width: 480px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .col-4 {
-    margin: 10px 0;
-    padding: 10px;
-  }
-}
