@@ -84,7 +84,35 @@
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10" aria-label="Slide 11"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11" aria-label="Slide 12"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12" aria-label="Slide 13"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="13" aria-label="Slide 14"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="14" aria-label="Slide 15"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="15" aria-label="Slide 16"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="16" aria-label="Slide 17"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="17" aria-label="Slide 18"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="18" aria-label="Slide 19"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="19" aria-label="Slide 20"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="20" aria-label="Slide 21"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="21" aria-label="Slide 22"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="22" aria-label="Slide 23"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="23" aria-label="Slide 24"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="24" aria-label="Slide 25"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="25" aria-label="Slide 26"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="26" aria-label="Slide 27"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="27" aria-label="Slide 28"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="28" aria-label="Slide 29"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="29" aria-label="Slide 30"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="30" aria-label="Slide 31"></button>
+         </div>
         <div class="container-fluid ">
             <div class="carousel-inner" style="height: 30rem;">
                 <div class="carousel-item active">
@@ -103,10 +131,206 @@
                 </div>
                 
                 <div class="carousel-item">
-                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <img src="./imagenes/Austral.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
                     <h5>Ranking 3</h5>
-                    <p>Universidad Torcuato Di Tella.</p>
+                    <p>UA-Universidad Austral.</p>
+                  </div>
+                </div>
+                 <div class="carousel-item">
+                  <img src="./imagenes/utn2.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 4</h5>
+                    <p>UTN-Universidad Tecnológica Nacional.</p>
+                  </div>
+                </div>
+                 <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 5</h5>
+                    <p>UTDT-Universidad Torcuato Di Tella.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/Palermo.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 6</h5>
+                    <p>UP-Universidad de Palermo.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/ITBA.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 7</h5>
+                    <p>ITBA-Instituto Tecnológico de Buenos Aires.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/BELGRANO.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 8</h5>
+                    <p>UB-Universidad de Belgrano.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/Salvador.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 9</h5>
+                    <p>USAL-Universidad del Salvador Buenos Aires.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UADE.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 10</h5>
+                    <p>UADE-Universidad Argentina de la Empresa.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/Febrero.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 11</h5>
+                    <p>UNTREF-Universidad Nacional de Tres de Febrero.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UCES.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 12</h5>
+                    <p>UCES-Universidad de Ciencias Empresariales y Sociales.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/flasco.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 13</h5>
+                    <p>FLACSO-Facultad Latinoamericana de Ciencias Sociales Argentina.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 14</h5>
+                    <p>UCEMA-Universidad del CEMA.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 15</h5>
+                    <p>UAI-Universidad Abierta Interamericana.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 16</h5>
+                    <p>IUHIBA-Instituto Universitario del Hospital Italiano.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 17</h5>
+                    <p>UF-Universidad Favaloro.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 18</h5>
+                    <p>IUC-Instituto Universitario CEMIC.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 19</h5>
+                    <p>UMAI-Universidad Maimónides.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 20</h5>
+                    <p>UK-Universidad Argentina John F Kennedy.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 21</h5>
+                    <p>CEUNIB-Instituto Universitario de Ciencias de la Salud.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 22</h5>
+                    <p>CAECE-Universidad CAECE.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 23</h5>
+                    <p>UNA-Universidad Nacional de las Artes.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 24</h5>
+                    <p>UNIPE-Universidad Pedagógica Nacional Argentina.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 25</h5>
+                    <p>ISALUD-Universidad Isalud.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 26</h5>
+                    <p>ESEADE-Escuela de Economía y Administración de Empresas.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 27</h5>
+                    <p>UMSA-Universidad del Museo Social Argentino.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 28</h5>
+                    <p>UFLO-Universidad de Flores.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 29</h5>
+                    <p>UDEMM-Universidad de la Marina Mercante.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 30</h5>
+                    <p>UCINE-Universidad del Cine.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagenes/UTDT.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block opacity-50 bg-black">
+                    <h5>Ranking 31</h5>
+                    <p>IDEA-Instituto para el Desarrollo Empresarial de la Argentina.</p>
                   </div>
                 </div>
               </div>
