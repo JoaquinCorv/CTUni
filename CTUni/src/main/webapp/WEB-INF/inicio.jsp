@@ -79,6 +79,11 @@
 	</header>
 	<body>
 		<main>
+		<c:if test="${not empty errorMessage}">
+    <div class="alert alert-danger">
+        ${errorMessage}
+    </div>
+</c:if>
 			<div id="carouselExampleCaptions" class="carousel slide w-75  m-2 d-inline-block">
         <div class="carousel-indicators ">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

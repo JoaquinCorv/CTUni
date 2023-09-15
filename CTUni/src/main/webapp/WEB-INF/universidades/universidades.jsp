@@ -75,6 +75,11 @@
 		</div>
 	</header>
 	<main>
+			<c:if test="${not empty errorMessage}">
+    <div class="alert alert-danger">
+        ${errorMessage}
+    </div>
+</c:if>
 		<div class="d-flex justify-content-center pt-2">
 			<h1>${universidad.universidadName}</h1>
 		</div>
@@ -92,7 +97,10 @@
 		</div>
 		<br>
 		<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes"><ins>Ranking</ins>:${universidad.ranking}</p>
+			<p class="nroIngresantes"><ins>Ranking</ins> :${universidad.ranking}</p>
+		</div>
+				<div class="d-flex justify-content-center pt-2">
+			<p class="nroIngresantes"><ins>Calificación de Usuarios</ins> :${universidad.rating}</p>
 		</div>
 		
 		
