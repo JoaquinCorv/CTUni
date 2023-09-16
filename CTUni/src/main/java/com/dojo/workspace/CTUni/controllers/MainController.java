@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.dojo.workspace.CTUni.models.Carreras;
 import com.dojo.workspace.CTUni.models.Comentarios;
 import com.dojo.workspace.CTUni.models.Universidades;
 import com.dojo.workspace.CTUni.models.Usuario;
@@ -45,7 +45,12 @@ public class MainController {
 	    return "inicio.jsp";
 	}
 
-
+	@GetMapping("/acercaDeNosotros")
+	public String nosotros(Model viewModel){
+		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
+        viewModel.addAttribute("universidades", universidades);
+		return "/universidades/Nosotros.jsp";
+	}
 
 	@GetMapping("/cuenta")
 	public String cuenta(Model model, HttpSession session) {
@@ -95,7 +100,10 @@ public class MainController {
 	    model.addAttribute("universidades", universidades);
 	    List<Comentarios> comentarios = commentService.obtenerTodasLasUniversidades();
 	    model.addAttribute("comentarios", comentarios);
-		
+        if (model.containsAttribute("error")) {
+            String error = (String) model.getAttribute("error");
+            model.addAttribute("errorMessage", error);
+        }
 	    
 	    return "/universidades/universidades.jsp";
 	}
@@ -121,7 +129,7 @@ public class MainController {
 	// GUARDAR O QUITAR DE GUARDADOS UNA UNIVERSIDAD
 	@GetMapping("/universidades/{opcion}/{idUni}")
 	public String guardarDesguardarUniversidad(Model model, @PathVariable("idUni") Long idUniversidad,
-			@PathVariable("opcion") String opcion, HttpSession sesion) {
+			@PathVariable("opcion") String opcion, HttpSession sesion, RedirectAttributes redirectAttributes) {
 		// VALIDAR SI LA SESION DEL USUARIO ESTA ACTIVA
 		Long userId = (Long) sesion.getAttribute("userID");
 		if (userId == null) {
@@ -130,7 +138,8 @@ public class MainController {
 		
 		Long usuarioYaGuardo = ctuniServices.restriccionguardado(userId);
 		if (usuarioYaGuardo == 5) {
-			return "redirect:/";
+			redirectAttributes.addFlashAttribute("error", "Llegó al límite máximo de 5 universidades guardadas.");
+			return "redirect:/universidades/" + idUniversidad;
 
 		}
 		
@@ -153,10 +162,10 @@ public class MainController {
 			return "redirect:/";
 		}
 
-		Universidades universidad = ctuniServices.obtenerUniversidadesPorId(id);
 
-		model.addAttribute("universidad", universidad);
+		Universidades universidad = ctuniServices.obtenerUniversidadesPorId(id);
 		model.addAttribute("userId", userId);
+		model.addAttribute("universidad", universidad);
 
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 	    model.addAttribute("universidades", universidades);
@@ -177,7 +186,8 @@ public class MainController {
 		if (resultado.hasErrors()) {
 			viewModel.addAttribute("usuario", usuario);
 			viewModel.addAttribute("Universidad", Universidad);
-			return "comentarios.jsp";
+			return "redirect:/comentario/" + id;
+
 		}
 
 		// Consulta si ya usuario comento uni

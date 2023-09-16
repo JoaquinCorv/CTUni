@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+.cuerpo {
+	color: #d9d9d9;
+}
+.list-group p{
+	margin-left:35%;
+	margin-right:25%;
+}
+.cuerpo li{
+	color: #e6e6e6;
+}
+
+.cuerpo p{
+	color: #e6e6e6;
+}

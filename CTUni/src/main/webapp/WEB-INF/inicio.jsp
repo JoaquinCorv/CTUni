@@ -40,7 +40,7 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Acerca de nosotros</a>
+                        <a class="nav-link" href="/acercaDeNosotros">Acerca de nosotros</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -79,6 +79,11 @@
 	</header>
 	<body>
 		<main>
+		<c:if test="${not empty errorMessage}">
+    <div class="alert alert-danger">
+        ${errorMessage}
+    </div>
+</c:if>
 			<div id="carouselExampleCaptions" class="carousel slide w-75  m-2 d-inline-block">
         <div class="carousel-indicators ">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
