@@ -48,9 +48,6 @@ public class Universidades {
 	@Column(columnDefinition = "CHAR(90)")
 	private String direccion;
 	
-	@Column(columnDefinition = "CHAR(90)")
-	private String cuotaDeIngreso;
-	
 	@Column(updatable = false)
 	private Date createdAt;
 	private Date updatedAt;
@@ -84,14 +81,6 @@ public class Universidades {
 	}
 	public void setGuardaruni(List<Usuario> guardaruni) {
 		this.guardaruni = guardaruni;
-	}
-	
-	public String getCuotaDeIngreso() {
-		return cuotaDeIngreso;
-	}
-
-	public void setCuotaDeIngreso(String cuotaDeIngreso) {
-		this.cuotaDeIngreso = cuotaDeIngreso;
 	}
 
 	public Double getRating() {

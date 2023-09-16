@@ -32,6 +32,9 @@ public class Carreras {
 	@Column(columnDefinition = "CHAR(90)")
 	private String tipo;
 	
+	@Column(columnDefinition = "CHAR(90)")
+	private String costo;
+	
 	@Column(updatable = false)
 	private Date createdAt;
 	private Date updatedAt;
@@ -62,6 +65,14 @@ public class Carreras {
 
 	public void setCarreras(Sedes carreras) {
 		this.carreras = carreras;
+	}
+
+	public String getCosto() {
+		return costo;
+	}
+
+	public void setCosto(String costo) {
+		this.costo = costo;
 	}
 
 	public void setId(Long id) {
