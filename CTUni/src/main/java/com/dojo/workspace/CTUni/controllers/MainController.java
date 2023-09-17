@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.dojo.workspace.CTUni.models.Comentarios;
@@ -204,4 +205,79 @@ public class MainController {
 
 		return "redirect:/";
 	}
+	
+    private String[] topics = {"Ciencia","Deportes","Arte","Tecnología"};
+
+    @GetMapping("/test")
+    public String showTestPage(Model model) {
+       
+        return "test.jsp";
+    }
+
+    @PostMapping("/test")
+    public String processTestResults(@RequestParam("answers[0]") String answer0,
+                                     @RequestParam("answers[1]") String answer1,
+                                     @RequestParam("answers[2]") String answer2,
+                                     @RequestParam("answers[3]") String answer3,
+                                     @RequestParam("answers[4]") String answer4,
+                                     @RequestParam("answers[5]") String answer5,
+                                     @RequestParam("answers[6]") String answer6,
+                                     @RequestParam("answers[7]") String answer7,
+                                     @RequestParam("answers[8]") String answer8,
+                                     @RequestParam("answers[9]") String answer9,
+                                     Model model) {
+        String[] answers = {answer0, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9};
+
+        // aca se guardan las respuestas
+        String selectedTopic = calculateSelectedTopic(answers);
+
+        // esto te lleva al topico en cuestion
+        return "redirect:/test/result?topic=" + selectedTopic;
+    }
+
+    @GetMapping("/test/result")
+    public String showResultPage(@RequestParam(name = "topic") String topic, Model model) {
+        model.addAttribute("topic", topic);
+        return "results.jsp";
+    }
+
+    private String calculateSelectedTopic(String[] answers) {
+        
+        int[] counts = new int[6];  // opciones (A, B, C, D, E, F)
+        
+        for (String answer : answers) {
+            if (answer != null && !answer.isEmpty()) {
+                char selectedOption = answer.charAt(0);  // la opcion se guarda en letras (A, B, C, etc)
+                if (selectedOption >= 'A' && selectedOption <= 'F') {
+                    counts[selectedOption - 'A']++;
+                }
+            }
+        }
+
+        // esto nos muestra la opcion que mas se repitio en el formulario
+        int maxCount = counts[0];
+        char selectedLetter = 'A';
+        
+        for (int i = 1; i < counts.length; i++) {
+            if (counts[i] > maxCount) {
+                maxCount = counts[i];
+                selectedLetter = (char) ('A' + i);
+            }
+        }
+
+        // lo que mas se repite se muestra aca
+        switch (selectedLetter) {
+            case 'A':
+                return topics[0];
+            case 'B':
+                return topics[1];
+            case 'C':
+                return topics[2];
+            case 'D':
+                return topics[3];
+            // Agrega mas topicos aca
+            default:
+                return "Tema no identificado";
+        }
+    }
 }
