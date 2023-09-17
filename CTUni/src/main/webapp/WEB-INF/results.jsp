@@ -9,9 +9,12 @@
 <head>
 <meta charset="ISO-8859-1">
 
-<title>Crea tu libro</title>
+<title>Su resultado es...</title>
 
-<link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="../css/bootstrap.min.css">
 
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
@@ -19,14 +22,26 @@
 
 <script type="text/javascript" src="/js/app.js"></script>
 
+<link rel="icon" href="../imagenes/gorra-de-posgrado.png">
+
 </head>
 
 <body>
- <h1>Resultados del Test Vocacional</h1>
-    <p>Tu tema vocacional más común es:</p>
-    <h2>${topic}</h2>
-    
-
-
-
+	<div class="d-flex justify-content-end pt-2 pe-2">
+		<div class="pe-1">
+			<a href="/test" class="btn btn-info text-white"> Volver a
+				realizar el Test</a>
+		</div>
+		<div>
+			<a href="/" class="btn btn-success text-white"> Volver a la
+				Página Principal</a>
+		</div>
+	</div>
+	<div class="pt-2 ps-3">
+		<h1>Resultados del Test Vocacional</h1>
+		<p>Tu tema vocacional más común es:</p>
+		<h2>${topic}</h2>
+		<br>
+	</div>
 </body>
+</html>

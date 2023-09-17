@@ -9,9 +9,11 @@
 <head>
 <meta charset="ISO-8859-1">
 
-<title>Crea tu libro</title>
+<title>Realizá tu Test Vocacional</title>
 
 <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="./css/bootstrap.min.css">
 
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
@@ -19,10 +21,13 @@
 
 <script type="text/javascript" src="/js/app.js"></script>
 
+<link rel="icon" href="imagenes/gorra-de-posgrado.png">
+
 </head>
 
 <body>
-    <h1>Test Vocacional</h1>
+<div class="ps-3">
+    <h1 class="pt-2">Test Vocacional</h1>
     <form method="post" action="/test">
         <div>
             <label for="question1">1. ¿Qué tipo de actividades prefieres realizar en tu tiempo libre?</label>
@@ -35,6 +40,7 @@
                 <option value="F">F. Socializar con amigos.</option>
             </select>
         </div>
+        <br>
         <div>
             <label for="question2">2. ¿Qué tipo de temas te interesan más?</label>
             <select id="question2" name="answers[1]">
@@ -46,6 +52,7 @@
                 <option value="F">F. Relaciones sociales y comunicación.</option>
             </select>
         </div>
+        <br>
         <div>
             <label for="question3">3. ¿Qué ambiente laboral prefieres?</label>
             <select id="question3" name="answers[2]">
@@ -57,6 +64,7 @@
                 <option value="F">F. Un entorno social y colaborativo.</option>
             </select>
         </div>
+        <br>
         <div>
             <label for="question4">4. ¿Cuál de las siguientes actividades te atrae más?</label>
             <select id="question4" name="answers[3]">
@@ -68,6 +76,7 @@
                 <option value="F">F. Pasar tiempo con amigos y socializar.</option>
             </select>
         </div>
+        <br>
         <div>
             <label for="question5">5. ¿Qué tipo de libros o revistas sueles leer?</label>
             <select id="question5" name="answers[4]">
@@ -79,6 +88,7 @@
                 <option value="F">F. Revistas de entretenimiento y sociales.</option>
             </select>
         </div>
+        <br>
         <div>
             <label for="question6">6. ¿Cuál de estas palabras te describe mejor?</label>
             <select id="question6" name="answers[5]">
@@ -90,6 +100,7 @@
                 <option value="F">F. Sociable.</option>
             </select>
         </div>
+        <br>
         <div>
             <label for="question7">7. ¿Cuál de las siguientes actividades disfrutas más en tu tiempo libre?</label>
             <select id="question7" name="answers[6]">
@@ -101,6 +112,7 @@
                 <option value="F">F. Salir con amigos o conocer gente nueva.</option>
             </select>
         </div>
+        <br>
         <div>
             <label for="question8">8. ¿Qué te gustaría aprender o mejorar en el futuro?</label>
             <select id="question8" name="answers[7]">
@@ -112,6 +124,7 @@
                 <option value="F">F. Habilidades sociales y comunicación.</option>
             </select>
         </div>
+        <br>
         <div>
             <label for="question9">9. ¿En qué tipo de proyecto te gustaría trabajar?</label>
             <select id="question9" name="answers[8]">
@@ -123,6 +136,7 @@
                 <option value="F">F. Proyecto comunitario o social.</option>
             </select>
         </div>
+        <br>
         <div>
             <label for="question10">10. ¿Cuál de las siguientes actividades disfrutas más en grupo?</label>
             <select id="question10" name="answers[9]">
@@ -134,6 +148,10 @@
                 <option value="F">F. Participar en actividades sociales o voluntariado.</option>
             </select>
         </div>
-        <input type="submit" value="Enviar">
+        <br>
+        <button type="submit" class="btn btn-success">Finalizar</button>
     </form>
+    </div>
+    <br>
 </body>
+</html>

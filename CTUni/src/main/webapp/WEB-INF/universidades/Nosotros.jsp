@@ -40,7 +40,7 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Acerca de nosotros</a>
+                        <a class="nav-link" href="#">Acerca de Nosotros</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,64 +64,61 @@
                           <li><a class="dropdown-item" href="#">NombreUni</a></li>
                         </ul>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
-			                <c:choose>
-			                    <c:when test="${isLoggedIn}">Cuenta</c:when>
-			                    <c:otherwise>Login/Register</c:otherwise>
-			                </c:choose>
-           			 	</a>
-                      </li>
+                     <li class="nav-item"><a class="nav-link active"
+									href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
+										<c:choose>
+											<c:when test="${isLoggedIn}">Cuenta</c:when>
+											<c:otherwise>Login/Registro</c:otherwise>
+										</c:choose>
+								</a></li>
                     </ul>
                     
                   </div>
 		</div>
 	</header>
 	
-	<footer>
-	<div class="cuerpo">
-		<h2>¿Te has preguntado qué estudiar y dónde?</h2>
+	<main>
+	<div class="cuerpo pt-2 ps-3 pb-2">
+		<h2>¿Te has preguntado qué y dónde estudiar?</h2>
 		
-		<h4>En nuestra Página web te ayudaremos a elegir una carrera conforme con lo que estas buscando.</h4>
+		<h4>En nuestra página web te ayudaremos a elegir una carrera conforme con lo que estas buscando.</h4>
 		
 		<p>Para eso te brindaremos:</p>
 		<ul>
 		<li>Universidades de tu provincia y sus carreras.</li>
-		<li>El rainking de universidades en la provincia de Buenos Aries.</li>
+		<li>El ranking de universidades en la provincia de Buenos Aires.</li>
 		<li>Un apartado de universidades destacadas.</li>
 		<li>Comentarios y puntajes de cada universidad.</li>
 		</ul>
-		<h6>Si sos un usuario registrado tambien podes comentar y dar una puntuacion a las universidades.</h6>
+		<h6>Si sos un usuario registrado también podés comentar y dar una puntuación a las universidades.</h6>
 	</div>
-	<br>
-		
-		<div class="list-group">
-		<div class="row">
-		<div class="col-4">
-		<p>
-		CTUNI
-		Diseñado y construido con todo el amor del mundo por el equipo
-		de Camino a Tu Universidad.</p></div>
-		<div class="col-4">
-		<p>
-		ENLACES
-		Inicio
-		Acerca de nosotros
-		Universidades
-		Carreras
-		Registro
-		Cuenta</p></div>
-		<div class="col-4 ">
-		<p>
-		Integrantes
-		Ailin Lell.
-		Luciano Altamirano.
-		Joaquín Corvalán.
-		Fancisco Encalada.
-		Tomás Petrucci.</p></div>
+	</main>
+		<footer>
+		<div class="list-group pt-2">
+			<div class="row">
+				<div class="col-4">
+					<p>CTUni fue diseñado y construido con todo el amor del mundo por
+						el equipo de Camino a Tu Universidad.</p>
+				</div>
+				<div class="col-4">
+					<a href="/"> Inicio </a> <br> 
+					<a href="/acercaDeNosotros"> Acerca de Nosotros </a> <br>
+					 <a> Universidades </a><br> 
+					 <a> Carreras </a> <br> 
+					 <a href="/CTUniRegister"> Login/Registro </a> <br> 
+					 <a> Cuenta</a>
+				</div>
+				<div class="col-4 ">
+					<p>
+						<ins> Integrantes</ins>
+						: Ailin Lell <br> Luciano Altamirano <br> Joaquín
+						Corvalán <br> Francisco Encalada <br> Tomás Petrucci <br>
+						Julián Albornoz
+					</p>
+				</div>
+			</div>
 		</div>
-		</div>
-		</footer>
+	</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 </body>
