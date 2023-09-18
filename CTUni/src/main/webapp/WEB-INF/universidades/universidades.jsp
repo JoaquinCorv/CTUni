@@ -116,7 +116,7 @@
 			</c:choose>
 			</div>
 			</div>
-		<div class="container w-25" id="coment">
+		<div class="container w-25 float-end m-4" id="coment">
 			<div class="row">
 				<div class="col-112">
 					<h4>Comentarios:</h4>
