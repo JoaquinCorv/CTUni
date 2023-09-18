@@ -115,7 +115,7 @@
         ${errorMessage}
     </div>
 </c:if>
-		<div class="list-group w-50 pt-2">
+		<div class="list-group pt-2">
 		<div class="d-flex flex-column mb-3">
 			<div class="p-2">
 			<h2>${universidad.universidadName}</h2>
