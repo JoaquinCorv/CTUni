@@ -21,7 +21,11 @@
 	}
 .list-group{
 	display:inline-block;
+	margin:3%;
 }
 .container{
 	display:inline-block;
+}
+.p-3{
+	text-decoration: none;
 }

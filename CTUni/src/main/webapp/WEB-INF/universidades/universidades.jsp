@@ -85,19 +85,19 @@
 		<div class="list-group w-50 pt-2">
 		<div class="d-flex flex-column mb-3">
 			<div class="p-2">
-			<h1>${universidad.universidadName}</h1>
+			<h2>${universidad.universidadName}</h2>
 			</div>
 		</div>
 		<br>
-		<div class="p-3"><h5><ins>Localidad</ins>: ${universidad.localidad}</h5>
+		<div class="p-3"><h5>Localidad: ${universidad.localidad}</h5>
 		</div>
-		<div class="p-3"><h5><ins>direccion</ins>: ${universidad.direccion}</h5>
+		<div class="p-3"><h5>Direccion: ${universidad.direccion}</h5>
 		</div>
-		<div class="p-3"><h5><ins>Institución:</ins> ${universidad.publicOrPrivate}</h5>
+		<div class="p-3"><h5>Institución: ${universidad.publicOrPrivate}</h5>
 		</div>
-		<div class="p-3"><h5><ins>Ranking</ins> :${universidad.ranking}</h5>
+		<div class="p-3"><h5>Ranking: ${universidad.ranking}</h5>
 		</div>
-				<div class="p-3"><h5><ins>Calificación de Usuarios</ins> :${universidad.rating}</h5>
+				<div class="p-3"><h5>Calificación de Usuarios:${universidad.rating}</h5>
 		</div>
 		
 		<div class="guardar">
