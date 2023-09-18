@@ -153,6 +153,9 @@
 			<div class="row">
 				<div class="col-112">
 					<h4>Comentarios:</h4>
+									<div class="tuOpinion px-2 float-end">
+						            <a id="opinion" href="/comentario/${universidad.id}">Comentar</a>
+						            </div>
 						<c:forEach var="comentario" items="${comentarios}">
 						    <c:if test="${comentario.universidades.id == universidad.id}">
 						    		<br>
@@ -165,9 +168,6 @@
 						            <hr>
 						    </c:if>
 						</c:forEach>
-									<div class="tuOpinion px-2">
-						            <a id="opinion" href="/comentario/${universidad.id}">Deja tu opinion</a>
-						            </div>
 				</div>
 			</div>
 		</div>
