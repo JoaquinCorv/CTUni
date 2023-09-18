@@ -175,7 +175,7 @@ public class MainController {
 		Usuario usuario = userservices.encontrarUserPorId(userLog);
 		Universidades Universidad = ctuniServices.obtenerUniversidadesPorId(id);
 		if (userLog == null) {
-			return "redirect:/";
+			return "redirect:/CTUniRegister";
 		}
 		if (resultado.hasErrors()) {
 			viewModel.addAttribute("usuario", usuario);
@@ -196,7 +196,7 @@ public class MainController {
 
 		ctuniServices.actualizarUniversidad(Universidad);
 
-		return "redirect:/";
+		return "redirect:/universidades/" + id;
 	}
 
 	private String[] topics = { "Ciencia", "Deportes", "Arte", "Tecnologia", "Literatura", "Politica" };
