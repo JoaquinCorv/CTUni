@@ -155,7 +155,7 @@ public class MainController {
 		model.addAttribute("isLoggedIn", isLoggedIn);
 		Long userId = (Long) session.getAttribute("userID");
 		if (userId == null) {
-			return "redirect:/";
+			return "redirect:/CTUniRegister";
 		}
 
 		Universidades universidad = ctuniServices.obtenerUniversidadesPorId(id);
