@@ -27,3 +27,12 @@
 .p-3{
 	text-decoration: none;
 }
+#fondodepalabra{
+	background-color:black;
+	margin:0px;
+	padding:0;
+	width:70%;
+}
+#carousel-ads-1{
+	width:100%;
+}

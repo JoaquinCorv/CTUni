@@ -23,6 +23,7 @@
 </head>
 <body>
 <header>
+		
 		<div class="container-fluid" id="encabezado">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
@@ -76,7 +77,39 @@
                   </div>
 		</div>
 	</header>
-	<main>
+	
+	<div id="carousel-ads-1"
+			class="carousel slide mt-1 d-inline-block carousel-ads"
+			data-bs-ride="carousel">
+			<div class="carousel-inner m-2">
+				<div class="carousel-item active  h-25" data-bs-interval="2000">
+					<div id="fondodepalabra"
+						class="carousel-caption d-none d-md-block opacity-75 text-white text-opacity-100">
+						<h5>Universidades Destacadas</h5>
+					</div>
+					<img src="/imagenes/itbaa.jpg" class="d-block h-100"
+						alt="...">
+
+				</div>
+				<div class="carousel-item h-25" data-bs-interval="2000">
+					<div id="fondodepalabra"
+						class="carousel-caption d-none d-md-block opacity-75 text-white text-opacity-100">
+						<h5>Universidades Destacadas</h5>
+					</div>
+					<img src="/imagenes/ucess.jpg" class="d-block h-100"
+						alt="...">
+				</div>
+				<div class="carousel-item h-25" data-bs-interval="2000">
+					<img src="/imagenes/logo4.jpg" class="d-block h-100"
+						alt="...">
+					<div id="fondodepalabra"
+						class="carousel-caption d-none d-md-block opacity-75 text-white text-opacity-100">
+						<h5>Universidades Destadacas</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main>
 			<c:if test="${not empty errorMessage}">
     <div class="alert alert-danger">
         ${errorMessage}
@@ -116,7 +149,7 @@
 			</c:choose>
 			</div>
 			</div>
-		<div class="container w-25 float-end m-4" id="coment">
+		<div class="container w-25 float-end my-4 me-5" id="coment">
 			<div class="row">
 				<div class="col-112">
 					<h4>Comentarios:</h4>
