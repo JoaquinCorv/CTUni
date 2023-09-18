@@ -2,9 +2,26 @@
     background-color: #29248C;
 }
 .guardar img{
-	width:5%;
+	width:25%;
 	 border-radius: 10px;
 }
-.checkbox:checked ~.a{
-	display: none;
+.usuario{
+	border-radius: 15px;
+}
+#coment{
+	background-color:#e8e9e8;
+	color:#5e62b0;
+	border-radius: 10px;
+	}
+#opinion{
+	color:#ffffff;
+	background-color: #5475bb;
+	text-decoration: none;
+	border-radius: 5px;
+	}
+.list-group{
+	display:inline-block;
+}
+.container{
+	display:inline-block;
 }

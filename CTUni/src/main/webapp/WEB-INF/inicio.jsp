@@ -77,6 +77,9 @@
 
 						</div>
 					</div>
+					</nav>
+					</div>
+					</div>
 	</header>
 
 	<main>
