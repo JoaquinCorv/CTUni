@@ -154,7 +154,7 @@
 				<div class="col-112">
 					<h4>Comentarios:</h4>
 									<div class="tuOpinion px-2 float-end">
-						            <a id="opinion" href="/comentario/${universidad.id}">Comentar</a>
+						            <a id="opinion" href="/comentario/${universidad.id}">Dejanos tu opinion</a>
 						            </div>
 						<c:forEach var="comentario" items="${comentarios}">
 						    <c:if test="${comentario.universidades.id == universidad.id}">
