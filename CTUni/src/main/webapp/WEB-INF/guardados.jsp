@@ -18,7 +18,7 @@
 
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="css/inicio.css">
+<link rel="stylesheet" href="css/guardados.css">
 
 <link rel="icon" href="imagenes/gorra-de-posgrado.png">
 
@@ -81,14 +81,16 @@
 					</div>
 					</div>
 	</header>
-
+							<div class="list-group pt-2 w-50 ">
 							<c:forEach var="uni" items="${usuario.guardaruni}">
-                        <li>
+                        <h4>
                             <a href="/universidades/${uni.id}">
+                            <img class="logoguardar" src="/imagenes/guardados.png">
                                 <c:out value="${uni.universidadName}" />
                             </a>
-                        </li>
+                        </h4>
                     </c:forEach>
+                    </div>
 
 
 
