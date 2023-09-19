@@ -97,11 +97,14 @@
 		<footer>
 		<div class="list-group pt-2">
 			<div class="row">
-				<div class="col-4">
-					<p>CTUni fue diseñado y construido con todo el amor del mundo por
-						el equipo de Camino a Tu Universidad.</p>
+				<div class="col-3 me-3 ms-5">
+					<p>
+						<ins> Integrantes</ins>: Ailin Lell <br> Luciano Altamirano <br> Joaquín
+						Corvalán <br> Francisco Encalada <br> Tomás Petrucci <br>
+						Julián Albornoz
+					</p>
 				</div>
-				<div class="col-4">
+				<div class="col-3 ms-5">
 					<a href="/"> Inicio </a> <br> 
 					<a href="/acercaDeNosotros"> Acerca de Nosotros </a> <br>
 					 <a> Universidades </a><br> 
@@ -109,13 +112,9 @@
 					 <a href="/CTUniRegister"> Login/Registro </a> <br> 
 					 <a> Cuenta</a>
 				</div>
-				<div class="col-4 ">
-					<p>
-						<ins> Integrantes</ins>
-						: Ailin Lell <br> Luciano Altamirano <br> Joaquín
-						Corvalán <br> Francisco Encalada <br> Tomás Petrucci <br>
-						Julián Albornoz
-					</p>
+				<div class="col-3 ">
+					<p>CTUni fue diseñado y construido con todo el amor del mundo por
+						el equipo de Camino a Tu Universidad.</p>
 				</div>
 			</div>
 		</div>
