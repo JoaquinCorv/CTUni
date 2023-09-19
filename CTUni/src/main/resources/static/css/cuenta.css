@@ -6,7 +6,7 @@
 #encabezado h2{
 	color:white;
 }
-.cuenta{
+.cuenta, a{
 	text-decoration:none;
 	color: #29248C;
 }

@@ -80,8 +80,8 @@
 			</div>
 		</div>
 	</header>
-
-	<div class="cuenta ps-3 pt-3 ">
+	<div class="list-group w-50 ps-3 pt-3 m-3">
+	<div class="cuenta ">
 		<h1>Bienvenido a tu cuenta!</h1>
 		<br>
 
@@ -98,10 +98,11 @@
 
 		</c:if>
 
-		<a href="/test" class="text-decoration-none">Test Vocacional</a> <br> <br> 
-		<a href="/guardados" class="text-decoration-none">Guardados</a> <br> <br> 
-		<a href="/" class="text-decoration-none">Volver a la Página Principal</a> <br> <br> 
-		<a href="/logout" class="text-decoration-none">Cerrar sesión</a>
+		<a href="/test" >Test Vocacional</a> <br> <br> 
+		<a href="/guardados">Guardados</a> <br> <br> 
+		<a href="/">Volver a la Página Principal</a> <br> <br> 
+		<a href="/logout">Cerrar sesión</a>
+	</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 	
