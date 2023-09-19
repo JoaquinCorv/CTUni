@@ -23,7 +23,6 @@
 	display:inline-block;
 	margin:3%;
 	width:55%;
-
 }
 .p-3{
 	text-decoration: none;
@@ -36,4 +35,7 @@
 }
 #carousel-ads-1{
 	width:97%;
+}
+.p-2{
+	color: #29248C;
 }
