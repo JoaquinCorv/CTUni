@@ -81,7 +81,7 @@
 		</div>
 	</header>
 	<div class="list-group w-50 ps-3 pt-3 m-3">
-	<div class="cuenta ">
+	<div class="cuenta mb-3">
 		<h1>Bienvenido a tu cuenta!</h1>
 		<br>
 
