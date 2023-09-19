@@ -71,7 +71,7 @@
 								<li class="nav-item"><a class="nav-link active"
 									href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
 										<c:choose>
-											<c:when test="${isLoggedIn}">Cuenta</c:when>
+											<c:when test="${isLoggedIn}"><img class="usuario rounded-circle" src="/imagenes/usuarioinicio.jpg" width="35"></c:when>
 											<c:otherwise>Login/Registro</c:otherwise>
 										</c:choose>
 								</a></li>

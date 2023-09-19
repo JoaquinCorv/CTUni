@@ -69,7 +69,7 @@
 								<li class="nav-item"><a class="nav-link active"
 									href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
 										<c:choose>
-											<c:when test="${isLoggedIn}">Cuenta</c:when>
+											<c:when test="${isLoggedIn}"><img class="usuario rounded-circle" src="/imagenes/usuarioinicio.jpg" width="35"></c:when>
 											<c:otherwise>Login/Registro</c:otherwise>
 										</c:choose>
 								</a></li>
@@ -86,9 +86,9 @@
 		<c:if test="${not empty errorMessage}">
 			<div class="alert alert-danger">${errorMessage}</div>
 		</c:if>
-		<div id="carouselExampleCaptions"
+		<div id="carouselExampleCaptions "
 			class="carousel slide w-75  m-2 d-inline-block">
-			<div class="carousel-indicators ">
+			<div class="carousel-indicators  ">
 				<button type="button" data-bs-target="#carouselExampleCaptions"
 					data-bs-slide-to="0" class="active" aria-current="true"
 					aria-label="Slide 1"></button>
@@ -154,7 +154,7 @@
 					data-bs-slide-to="30" aria-label="Slide 31"></button>
 			</div>
 			<div class="container-fluid ">
-				<div class="carousel-inner" style="height: 30rem;">
+				<div class="carousel-inner " style="height: 30rem;">
 					<div class="carousel-item active">
 						<img src="./imagenes/UBA.jpg" class="d-block w-100" alt="...">
 						<div
