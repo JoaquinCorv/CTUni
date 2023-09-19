@@ -23,6 +23,7 @@
 </head>
 <body>
 <header>
+		
 		<div class="container-fluid" id="encabezado">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
@@ -64,46 +65,75 @@
                       <li class="nav-item">
                         <a class="nav-link active" href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
 			                <c:choose>
-			                    <c:when test="${isLoggedIn}">Cuenta</c:when>
-			                    <c:otherwise>Login/Register</c:otherwise>
-			                </c:choose>
+											<c:when test="${isLoggedIn}"><img class="usuario rounded-circle" src="/imagenes/usuarioinicio.jpg" width="35"></c:when>
+											<c:otherwise>Login/Registro</c:otherwise>
+							</c:choose>
            			 	</a>
                       </li>
                     </ul>
-                    
+                    </div>
+                  </div>
+                  </nav>
                   </div>
 		</div>
 	</header>
-	<main>
+	
+	<div id="carousel-ads-1"
+			class="carousel slide mt-1 d-inline-block carousel-ads"
+			data-bs-ride="carousel">
+			<div class="carousel-inner m-2">
+				<div class="carousel-item active  h-25" data-bs-interval="2000">
+					<div id="fondodepalabra"
+						class="carousel-caption d-none d-md-block opacity-75 text-white text-opacity-100">
+						<h5>Universidades Destacadas</h5>
+					</div>
+					<img src="/imagenes/itbaa.jpg" class="d-block h-100"
+						alt="...">
+
+				</div>
+				<div class="carousel-item h-25" data-bs-interval="2000">
+					<div id="fondodepalabra"
+						class="carousel-caption d-none d-md-block opacity-75 text-white text-opacity-100">
+						<h5>Universidades Destacadas</h5>
+					</div>
+					<img src="/imagenes/ucess.jpg" class="d-block h-100"
+						alt="...">
+				</div>
+				<div class="carousel-item h-25" data-bs-interval="2000">
+					<img src="/imagenes/logo4.jpg" class="d-block h-100"
+						alt="...">
+					<div id="fondodepalabra"
+						class="carousel-caption d-none d-md-block opacity-75 text-white text-opacity-100">
+						<h5>Universidades Destadacas</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main>
 			<c:if test="${not empty errorMessage}">
     <div class="alert alert-danger">
         ${errorMessage}
     </div>
 </c:if>
-		<div class="d-flex justify-content-center pt-2">
-			<h1>${universidad.universidadName}</h1>
+		<div class="list-group pt-2">
+		<div class="d-flex flex-column mb-3">
+			<div class="p-2">
+			<h2>${universidad.universidadName}</h2>
+			</div>
 		</div>
 		<br>
-		<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes"><ins>Localidad</ins>: ${universidad.localidad}</p>
+		<div class="p-3"><h5>Localidad: ${universidad.localidad}</h5>
 		</div>
-		<br>
-		<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes"><ins>direccion</ins>: ${universidad.direccion}</p>
+		<div class="p-3"><h5>Direccion: ${universidad.direccion}</h5>
 		</div>
-		<br>
-		<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes"><ins>Institución:</ins> ${universidad.publicOrPrivate}</p>
+		<div class="p-3"><h5>Institución: ${universidad.publicOrPrivate}</h5>
 		</div>
-		<br>
-		<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes"><ins>Ranking</ins> :${universidad.ranking}</p>
+		<div class="p-3"><h5>Ranking: ${universidad.ranking}</h5>
 		</div>
-				<div class="d-flex justify-content-center pt-2">
-			<p class="nroIngresantes"><ins>Calificación de Usuarios</ins> :${universidad.rating}</p>
+				<div class="p-3"><h5>Calificación de Usuarios:${universidad.rating}</h5>
 		</div>
 		
-		
+		<div class="guardar">
 			<c:choose>
 			    <c:when test="${ guardaruni.contains(Usuario) }">
 			        <a href="/universidades/noguardar/${universidad.id}">
@@ -111,41 +141,38 @@
 			        </a>
 			    </c:when>
 			    <c:otherwise>
-			    <input class="checkbox" type="checkbox">
+			    	
 			        <a href="/universidades/guardar/${universidad.id}">
-			            <div class="guardar">
-							<img class="logoguardar" src="/imagenes/el-logo.png" width="130"></div>
+			            <img class="logoguardar float-end" src="/imagenes/logodeguardarsi.png">
 			        </a>
 			    </c:otherwise>
 			</c:choose>
-		
-
-		
-		<div>
-			<h4>Comentarios:</h4>
-			
-		</div>
-		<c:forEach var="comentario" items="${comentarios}">
-		    <c:if test="${comentario.universidades.id == universidad.id}">
-		    		<h7>Comentario: <c:out value="${comentario.comentario}" /></h7>
-		    		<br>
-		            <h7>Usuario <c:out value="${comentario.autor.nombre}" /></h7> <!-- Accede al atributo 'nombre' del objeto 'autor' -->
-		            <h5>Puntaje <c:out value="${comentario.rating}" /></h5>
-		            
-		            <br>
-		            
-		    </c:if>
-		</c:forEach>
-		<div class="container">
+			</div>
+			</div>
+		<div class="container w-25 float-end my-4 me-5" id="coment">
 			<div class="row">
-				<div class="col-6">
-					<form action="" class="form_comentarios">
-					<textarea name="" id="" placeholder="comentario"></textarea>
-					</form>
+				<div class="col-112">
+					<h4>Comentarios:</h4>
+									<div class="tuOpinion px-2 float-end">
+						            <a id="opinion" href="/comentario/${universidad.id}">Dejanos tu opinion</a>
+						            </div>
+						<c:forEach var="comentario" items="${comentarios}">
+						    <c:if test="${comentario.universidades.id == universidad.id}">
+						    		<br>
+						    		<h6><img class="usuario" src="/imagenes/usuario.jpg" width="25"> <c:out value="${comentario.autor.nombre}" /> </h6><!-- Accede al atributo 'nombre' del objeto 'autor' -->
+						            <c:out value="${comentario.comentario}" />
+						            <br>
+						            <br>
+						            <h7>Estrellas <c:out value="${comentario.rating}" /></h7>
+						            <br>
+						            <hr>
+						    </c:if>
+						</c:forEach>
 				</div>
 			</div>
 		</div>
-		<a href="/comentario/${universidad.id}">deja tu opinion</a>
+					
+		
 	
 	</main>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

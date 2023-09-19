@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+#encabezado{
+    background-color: #29248C;
+}
+.list-group a{
+	text-decoration:none;
+	margin:3%;
+}
+.list-group{
+	margin:4%;
+}
+.list-group img{
+	width:10%;
+}

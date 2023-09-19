@@ -1,0 +1,22 @@
+@charset "ISO-8859-1";
+#encabezado{
+    background-color: #29248C;
+}
+.form-control{
+	background-color:#fafaf1;
+	color: black;
+}
+.list-group{
+	color:#6a5dab;
+}
+#comentar{
+	margin:3%;
+}
+#boton{
+	margin:3%;
+	justify-content:end;
+	background-color:white;
+	color: #29248C;
+	 border-radius: 15px;
+	 border-color:#6a5dab;
+}

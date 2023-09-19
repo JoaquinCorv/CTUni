@@ -47,7 +47,10 @@ public class MainController {
 	}
 
 	@GetMapping("/acercaDeNosotros")
-	public String nosotros(Model viewModel) {
+	public String nosotros(Model viewModel, HttpSession session) {
+		
+		boolean isLoggedIn = (session.getAttribute("userID") != null);
+		viewModel.addAttribute("isLoggedIn", isLoggedIn);
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 		viewModel.addAttribute("universidades", universidades);
 		return "/universidades/Nosotros.jsp";
@@ -155,7 +158,7 @@ public class MainController {
 		model.addAttribute("isLoggedIn", isLoggedIn);
 		Long userId = (Long) session.getAttribute("userID");
 		if (userId == null) {
-			return "redirect:/";
+			return "redirect:/CTUniRegister";
 		}
 
 		Universidades universidad = ctuniServices.obtenerUniversidadesPorId(id);
@@ -175,7 +178,7 @@ public class MainController {
 		Usuario usuario = userservices.encontrarUserPorId(userLog);
 		Universidades Universidad = ctuniServices.obtenerUniversidadesPorId(id);
 		if (userLog == null) {
-			return "redirect:/";
+			return "redirect:/CTUniRegister";
 		}
 		if (resultado.hasErrors()) {
 			viewModel.addAttribute("usuario", usuario);
@@ -196,14 +199,15 @@ public class MainController {
 
 		ctuniServices.actualizarUniversidad(Universidad);
 
-		return "redirect:/";
+		return "redirect:/universidades/" + id;
 	}
 
 	private String[] topics = { "Ciencia", "Deportes", "Arte", "Tecnologia", "Literatura", "Politica" };
 
 	@GetMapping("/test")
-	public String showTestPage(Model model) {
-
+	public String showTestPage(Model model, HttpSession session) {
+		boolean isLoggedIn = (session.getAttribute("userID") != null);
+		model.addAttribute("isLoggedIn", isLoggedIn);
 		return "test.jsp";
 	}
 

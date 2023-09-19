@@ -67,7 +67,7 @@
                      <li class="nav-item"><a class="nav-link active"
 									href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
 										<c:choose>
-											<c:when test="${isLoggedIn}">Cuenta</c:when>
+											<c:when test="${isLoggedIn}"><img class="usuario rounded-circle" src="/imagenes/usuarioinicio.jpg" width="35"></c:when>
 											<c:otherwise>Login/Registro</c:otherwise>
 										</c:choose>
 								</a></li>
@@ -85,10 +85,11 @@
 		
 		<p>Para eso te brindaremos:</p>
 		<ul>
-		<li>Universidades de tu provincia y sus carreras.</li>
-		<li>El ranking de universidades en la provincia de Buenos Aires.</li>
+		<li>Test Vocacional.</li>
 		<li>Un apartado de universidades destacadas.</li>
+		<li>Universidades de tu provincia y sus carreras.</li>
 		<li>Comentarios y puntajes de cada universidad.</li>
+		<li>El ranking de universidades en la provincia de Buenos Aires.</li>
 		</ul>
 		<h6>Si sos un usuario registrado también podés comentar y dar una puntuación a las universidades.</h6>
 	</div>
@@ -96,11 +97,14 @@
 		<footer>
 		<div class="list-group pt-2">
 			<div class="row">
-				<div class="col-4">
-					<p>CTUni fue diseñado y construido con todo el amor del mundo por
-						el equipo de Camino a Tu Universidad.</p>
+				<div class="col-3 me-3 ms-5">
+					<p>
+						<ins> Integrantes</ins>: Ailin Lell <br> Luciano Altamirano <br> Joaquín
+						Corvalán <br> Francisco Encalada <br> Tomás Petrucci <br>
+						Julián Albornoz
+					</p>
 				</div>
-				<div class="col-4">
+				<div class="col-3 ms-5">
 					<a href="/"> Inicio </a> <br> 
 					<a href="/acercaDeNosotros"> Acerca de Nosotros </a> <br>
 					 <a> Universidades </a><br> 
@@ -108,13 +112,9 @@
 					 <a href="/CTUniRegister"> Login/Registro </a> <br> 
 					 <a> Cuenta</a>
 				</div>
-				<div class="col-4 ">
-					<p>
-						<ins> Integrantes</ins>
-						: Ailin Lell <br> Luciano Altamirano <br> Joaquín
-						Corvalán <br> Francisco Encalada <br> Tomás Petrucci <br>
-						Julián Albornoz
-					</p>
+				<div class="col-3 ">
+					<p>CTUni fue diseñado y construido con todo el amor del mundo por
+						el equipo de Camino a Tu Universidad.</p>
 				</div>
 			</div>
 		</div>

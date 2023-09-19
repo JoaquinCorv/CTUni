@@ -69,7 +69,7 @@
 								<li class="nav-item"><a class="nav-link active"
 									href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
 										<c:choose>
-											<c:when test="${isLoggedIn}">Cuenta</c:when>
+											<c:when test="${isLoggedIn}"><img class="usuario rounded-circle" src="/imagenes/usuarioinicio.jpg" width="35"></c:when>
 											<c:otherwise>Login/Registro</c:otherwise>
 										</c:choose>
 								</a></li>
@@ -77,15 +77,18 @@
 
 						</div>
 					</div>
+					</nav>
+					</div>
+					</div>
 	</header>
 
 	<main>
 		<c:if test="${not empty errorMessage}">
 			<div class="alert alert-danger">${errorMessage}</div>
 		</c:if>
-		<div id="carouselExampleCaptions"
+		<div id="carouselExampleCaptions "
 			class="carousel slide w-75  m-2 d-inline-block">
-			<div class="carousel-indicators ">
+			<div class="carousel-indicators  ">
 				<button type="button" data-bs-target="#carouselExampleCaptions"
 					data-bs-slide-to="0" class="active" aria-current="true"
 					aria-label="Slide 1"></button>
@@ -151,7 +154,7 @@
 					data-bs-slide-to="30" aria-label="Slide 31"></button>
 			</div>
 			<div class="container-fluid ">
-				<div class="carousel-inner" style="height: 30rem;">
+				<div class="carousel-inner " style="height: 30rem;">
 					<div class="carousel-item active">
 						<img src="./imagenes/UBA.jpg" class="d-block w-100" alt="...">
 						<div
@@ -452,11 +455,14 @@
 	<footer>
 		<div class="list-group pt-2">
 			<div class="row">
-				<div class="col-4">
-					<p>CTUni fue diseñado y construido con todo el amor del mundo por
-						el equipo de Camino a Tu Universidad.</p>
+				<div class="col-3 me-3 ms-5">
+					<p>
+						<ins> Integrantes</ins>: Ailin Lell <br> Luciano Altamirano <br> Joaquín
+						Corvalán <br> Francisco Encalada <br> Tomás Petrucci <br>
+						Julián Albornoz
+					</p>
 				</div>
-				<div class="col-4">
+				<div class="col-3 ms-5">
 					<a href="/"> Inicio </a> <br> 
 					<a href="/acercaDeNosotros"> Acerca de Nosotros </a> <br>
 					 <a> Universidades </a><br> 
@@ -464,12 +470,9 @@
 					 <a href="/CTUniRegister"> Login/Registro </a> <br> 
 					 <a> Cuenta</a>
 				</div>
-				<div class="col-4 ">
-					<p>
-						<ins> Integrantes</ins>: Ailin Lell <br> Luciano Altamirano <br> Joaquín
-						Corvalán <br> Francisco Encalada <br> Tomás Petrucci <br>
-						Julián Albornoz
-					</p>
+				<div class="col-3 ">
+					<p>CTUni fue diseñado y construido con todo el amor del mundo por
+						el equipo de Camino a Tu Universidad.</p>
 				</div>
 			</div>
 		</div>
