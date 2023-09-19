@@ -47,7 +47,10 @@ public class MainController {
 	}
 
 	@GetMapping("/acercaDeNosotros")
-	public String nosotros(Model viewModel) {
+	public String nosotros(Model viewModel, HttpSession session) {
+		
+		boolean isLoggedIn = (session.getAttribute("userID") != null);
+		viewModel.addAttribute("isLoggedIn", isLoggedIn);
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 		viewModel.addAttribute("universidades", universidades);
 		return "/universidades/Nosotros.jsp";
@@ -202,8 +205,9 @@ public class MainController {
 	private String[] topics = { "Ciencia", "Deportes", "Arte", "Tecnologia", "Literatura", "Politica" };
 
 	@GetMapping("/test")
-	public String showTestPage(Model model) {
-
+	public String showTestPage(Model model, HttpSession session) {
+		boolean isLoggedIn = (session.getAttribute("userID") != null);
+		model.addAttribute("isLoggedIn", isLoggedIn);
 		return "test.jsp";
 	}
 
