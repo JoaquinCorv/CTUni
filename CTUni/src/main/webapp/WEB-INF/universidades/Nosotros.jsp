@@ -85,10 +85,11 @@
 		
 		<p>Para eso te brindaremos:</p>
 		<ul>
-		<li>Universidades de tu provincia y sus carreras.</li>
-		<li>El ranking de universidades en la provincia de Buenos Aires.</li>
+		<li>Test Vocacional.</li>
 		<li>Un apartado de universidades destacadas.</li>
+		<li>Universidades de tu provincia y sus carreras.</li>
 		<li>Comentarios y puntajes de cada universidad.</li>
+		<li>El ranking de universidades en la provincia de Buenos Aires.</li>
 		</ul>
 		<h6>Si sos un usuario registrado también podés comentar y dar una puntuación a las universidades.</h6>
 	</div>
