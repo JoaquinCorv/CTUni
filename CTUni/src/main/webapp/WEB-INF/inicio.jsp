@@ -66,7 +66,7 @@
 									<ul class="dropdown-menu">
 										<c:forEach var="uni" items="${carreras}">
 											<li><a class="dropdown-item"
-												href="/universidades/${uni.id}"> <c:out
+												href="/carreras/${uni.id}"> <c:out
 														value="${uni.carreraName}" />
 											</a></li>
 										</c:forEach>

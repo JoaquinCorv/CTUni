@@ -80,8 +80,8 @@ public class MainController {
 		return "cuenta.jsp";
 	}
 
-	@GetMapping("/carreras")
-	public String carreras(Model model, HttpSession sesion) {
+	@GetMapping("/carreras/{idUni}")
+	public String carreras(@PathVariable("idUni") Long idUni, Model model, HttpSession sesion) {
 		boolean isLoggedIn = (sesion.getAttribute("userID") != null);
 		model.addAttribute("isLoggedIn", isLoggedIn);
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
