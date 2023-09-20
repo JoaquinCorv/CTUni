@@ -53,10 +53,10 @@
 										Universidades </a>
 									<ul class="dropdown-menu">
 
-										<c:forEach var="uni" items="${universidades}">
+										<c:forEach var="uni" items="${carreras}">
 											<li><a class="dropdown-item"
 												href="/universidades/${uni.id}"> <c:out
-														value="${uni.siglas}" />
+														value="${uni.carreraName}" />
 											</a></li>
 										</c:forEach>
 									</ul></li>

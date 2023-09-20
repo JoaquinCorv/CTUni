@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-
+import com.dojo.workspace.CTUni.models.Carreras;
 import com.dojo.workspace.CTUni.models.Universidades;
 
 
@@ -15,6 +15,7 @@ import com.dojo.workspace.CTUni.models.Universidades;
 public interface CTunirepo extends CrudRepository<Universidades, Long> {
 	
 	List<Universidades> findAll();
+	
 	
 	List<Universidades> findByUniversidadName(String universidadName);
 	boolean existsByUniversidadName(String universidadName);

@@ -2,11 +2,13 @@ package com.dojo.workspace.CTUni.services;
 
 import com.dojo.workspace.CTUni.repositories.CTunirepo;
 import com.dojo.workspace.CTUni.repositories.userRepo;
+import com.dojo.workspace.CTUni.repositories.Carrerasrepo;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.dojo.workspace.CTUni.models.Carreras;
 import com.dojo.workspace.CTUni.models.Universidades;
 import com.dojo.workspace.CTUni.models.Usuario;
 
@@ -14,11 +16,17 @@ import com.dojo.workspace.CTUni.models.Usuario;
 public class CTuniServices {
     private final CTunirepo CTunirepo;
     private final userRepo userRepo;
+    private final Carrerasrepo Carrerasrepo;
 
-    public CTuniServices(CTunirepo CTunirepo, userRepo userRepo) {
+    public CTuniServices(CTunirepo CTunirepo, userRepo userRepo, Carrerasrepo Carrerasrepo) {
         this.CTunirepo = CTunirepo;
         this.userRepo = userRepo;
+        this.Carrerasrepo = Carrerasrepo;
 }
+    public List<Carreras> obtenerTodasLasCarreras() {
+        return Carrerasrepo.findAll();
+    }
+    
     public Universidades obtenerUniversidadesPorId(Long iduniversidadName) {
         return CTunirepo.findById(iduniversidadName).orElse(null);
     }
