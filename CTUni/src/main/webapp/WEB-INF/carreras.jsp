@@ -75,24 +75,24 @@
 	<main>
 	<section>
 			<div class="d-inline-block p-5 pt-5">
-				<h1>${Carreras.carreraName}</h1>
+				<h1>${carrera.carreraName}</h1>
 			</div>
 			<br>
-		<div class="p-3"><h5>duracion: ${Carreras.duracion}</h5>
+		<div class="p-3"><h5>duracion: ${carrera.duracion}</h5>
 		</div>
 
 		<br>
-		<div class="p-3"><h5>Plan de estudio: ${Carreras.planDeEstudio}</h5>
-		</div>
-
-			<br>
-		<br>
-		<div class="p-3"><h5>tipo: ${Carreras.tipo}</h5>
+		<div class="p-3"><h5>Plan de estudio: ${carrera.planDeEstudio}</h5>
 		</div>
 
 			<br>
 		<br>
-		<div class="p-3"><h5>costo: ${Carreras.costo}</h5>
+		<div class="p-3"><h5>tipo: ${carrera.tipo}</h5>
+		</div>
+
+			<br>
+		<br>
+		<div class="p-3"><h5>costo: ${carrera.costo}</h5>
 		</div>
 		
 		</section>
