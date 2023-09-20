@@ -85,10 +85,12 @@ public class MainController {
 	public String carreras(@PathVariable("idUni") Long idUni, Model model, HttpSession sesion) {
 		boolean isLoggedIn = (sesion.getAttribute("userID") != null);
 		model.addAttribute("isLoggedIn", isLoggedIn);
-		Carreras Carreras = ctuniServices.obtenerCarrerasPorId(idUni);
+		Carreras carrera = ctuniServices.obtenerCarrerasPorId(idUni);
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 		model.addAttribute("universidades", universidades);
-		model.addAttribute("Carreras", Carreras);
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		model.addAttribute("carreras", carreras);
+		model.addAttribute("carrera", carrera);
 		return "carreras.jsp";
 	}
 
