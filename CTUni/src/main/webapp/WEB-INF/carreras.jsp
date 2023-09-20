@@ -82,7 +82,7 @@
 		</div>
 
 		<br>
-		<div class="p-3"><h5>Plan de estudio: ${carrera.planDeEstudio}</h5>
+		<div class="p-3"><h5><a href="${carrera.planDeEstudio}" > Plan de estudio:</a></h5>
 		</div>
 
 			<br>
