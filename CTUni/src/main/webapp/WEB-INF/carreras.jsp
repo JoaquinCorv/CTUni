@@ -75,35 +75,26 @@
 	<main>
 	<section>
 			<div class="d-inline-block p-5 pt-5">
-				<h1>Nombre de la Carrera</h1>
+				<h1>${Carreras.carreraName}</h1>
 			</div>
+			<br>
+		<div class="p-3"><h5>duracion: ${Carreras.duracion}</h5>
+		</div>
 
-			<div class="anuncio">
-			  <p class="text-right">Aca van los anuncios</p>
-			</div>
+		<br>
+		<div class="p-3"><h5>Plan de estudio: ${Carreras.planDeEstudio}</h5>
+		</div>
 
 			<br>
-			<div class="d-inline-block p-5 pt-2">
-				<p class="nroIngresantes"><ins>N�mero de Ingresantes</ins>:
-					insertarNroIngresantes</p>
-			</div>
+		<br>
+		<div class="p-3"><h5>tipo: ${Carreras.tipo}</h5>
+		</div>
+
 			<br>
-			<div class="d-inline-block p-5 pt-2">
-				<p class="nroIngresantes"><ins>Duraci�n</ins>: insertarCantidadA�os</p>
-			</div>
-			<br>
-			<div class="d-inline-block p-5 pt-2">
-				<p class="nroIngresantes"><ins>Salida Laboral</ins>: insertarSalidaLaboral</p>
-			</div>
-			
-			<div class="anuncio">
-			  <p class="text-right">Aca van los anuncios</p>
-			</div>
-			
-			<br>
-			<div class="d-inline-block p-5 pt-2">
-				<p class="nroIngresantes"><ins>Costo</ins>: $xCantidad-Gratuita</p>
-			</div>
+		<br>
+		<div class="p-3"><h5>costo: ${Carreras.costo}</h5>
+		</div>
+		
 		</section>
 		<footer>
 			<div id="carouselExampleCaptions" class="carousel slide w-75  mt-2">

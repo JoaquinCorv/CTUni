@@ -26,7 +26,9 @@ public class CTuniServices {
     public List<Carreras> obtenerTodasLasCarreras() {
         return Carrerasrepo.findAll();
     }
-    
+    public Carreras obtenerCarrerasPorId(Long idcarreras) {
+        return Carrerasrepo.findById(idcarreras).orElse(null);
+    }
     public Universidades obtenerUniversidadesPorId(Long iduniversidadName) {
         return CTunirepo.findById(iduniversidadName).orElse(null);
     }

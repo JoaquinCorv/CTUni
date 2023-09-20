@@ -16,6 +16,7 @@ import com.dojo.workspace.CTUni.models.Carreras;
 import com.dojo.workspace.CTUni.models.Comentarios;
 import com.dojo.workspace.CTUni.models.Universidades;
 import com.dojo.workspace.CTUni.models.Usuario;
+import com.dojo.workspace.CTUni.repositories.Carrerasrepo;
 import com.dojo.workspace.CTUni.services.CTuniServices;
 import com.dojo.workspace.CTUni.services.CommentService;
 import com.dojo.workspace.CTUni.services.Userservices;
@@ -84,9 +85,10 @@ public class MainController {
 	public String carreras(@PathVariable("idUni") Long idUni, Model model, HttpSession sesion) {
 		boolean isLoggedIn = (sesion.getAttribute("userID") != null);
 		model.addAttribute("isLoggedIn", isLoggedIn);
+		Carreras Carreras = ctuniServices.obtenerCarrerasPorId(idUni);
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 		model.addAttribute("universidades", universidades);
-
+		model.addAttribute("Carreras", Carreras);
 		return "carreras.jsp";
 	}
 
