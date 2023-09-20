@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.dojo.workspace.CTUni.models.Carreras;
 import com.dojo.workspace.CTUni.models.Comentarios;
 import com.dojo.workspace.CTUni.models.Universidades;
 import com.dojo.workspace.CTUni.models.Usuario;
@@ -42,6 +43,8 @@ public class MainController {
 
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 		viewModel.addAttribute("universidades", universidades);
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		viewModel.addAttribute("carreras", carreras);
 
 		return "inicio.jsp";
 	}

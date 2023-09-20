@@ -38,9 +38,12 @@
 					<li class="listaItem" onclick="menuDesplegable"><a
 						class="listaItemLink" href="#">Carreras</a>
 						<ul class="categorias">
-							<li><a href="/carreras">NombreCarrera</a></li>
-							<li><a href="#">NombreCarrera</a></li>
-							<li><a href="#">NombreCarrera</a></li>
+										<c:forEach var="uni" items="${universidades}">
+											<li><a class="dropdown-item"
+												href="/universidades/${uni.id}"> <c:out
+														value="${uni.siglas}" />
+											</a></li>
+										</c:forEach>
 						</ul></li>
 					<li class="listaItem" onclick="menuDesplegable"><a
 						class="listaItemLink" href="#">Universidades</a>
