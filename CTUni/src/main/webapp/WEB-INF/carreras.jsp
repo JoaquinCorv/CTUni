@@ -103,7 +103,10 @@
 		<br>
 		<div class="p-3"><h5>costo: ${carrera.costo}</h5>
 		</div>
-		
+		<br>
+		<br>
+		<div class="p-3"><h5>universidad: ${carrera.carreras}</h5>
+		</div>
 		</section>
 		<footer>
 			<div id="carouselExampleCaptions" class="carousel slide w-75  mt-2">
