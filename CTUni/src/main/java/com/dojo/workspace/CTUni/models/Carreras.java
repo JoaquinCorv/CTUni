@@ -1,6 +1,7 @@
 package com.dojo.workspace.CTUni.models;
 
 import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,7 +10,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -39,9 +41,17 @@ public class Carreras {
 	private Date createdAt;
 	private Date updatedAt;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "carreras_id")
-	private Sedes carreras;
+	@ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "sedes_Con_Categorias", 
+        joinColumns = @JoinColumn(name = "carrera_id"), 
+        inverseJoinColumns = @JoinColumn(name = "sedes_id")
+    )
+    private List<Sedes> sedes;
+	
+//	@ManyToOne(fetch = FetchType.LAZY)
+//	@JoinColumn(name = "carreras_id")
+//	private List<Sedes> carreras;
 	
 	public Carreras() {
 
@@ -59,12 +69,12 @@ public class Carreras {
 		return id;
 	}
 
-	public Sedes getCarreras() {
-		return carreras;
+	public List<Sedes> getSedes() {
+		return sedes;
 	}
 
-	public void setCarreras(Sedes carreras) {
-		this.carreras = carreras;
+	public void setSedes(List<Sedes> sedes) {
+		this.sedes = sedes;
 	}
 
 	public String getCosto() {

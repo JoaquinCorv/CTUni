@@ -105,7 +105,8 @@
 		</div>
 		<br>
 		<br>
-		<div class="p-3"><h5>universidad: ${carrera.carreras}</h5>
+		<div class="p-3">
+		<h5>universidades: ${carrera}</h5>
 		</div>
 		</section>
 		<footer>

@@ -3,7 +3,6 @@ package com.dojo.workspace.CTUni.models;
 import java.sql.Date;
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -11,8 +10,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -42,12 +42,20 @@ public class Sedes {
 	private Date createdAt;
 	private Date updatedAt;
 	
+	@ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "sedes_Con_Categorias", 
+        joinColumns = @JoinColumn(name = "sedes_id"), 
+        inverseJoinColumns = @JoinColumn(name = "carrera_id")
+    )
+    private List<Carreras> carreras;
+	
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "universidad_id")
     private Universidades universidad;
 	
-	@OneToMany(mappedBy = "carreras", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private List<Carreras> carreras;
+//	@OneToMany(mappedBy = "carreras", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	private List<Carreras> carreras;
 	
 	public Sedes() {
 
