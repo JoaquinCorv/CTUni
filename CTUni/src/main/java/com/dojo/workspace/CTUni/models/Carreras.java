@@ -1,6 +1,7 @@
 package com.dojo.workspace.CTUni.models;
 
 import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -41,7 +42,7 @@ public class Carreras {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "carreras_id")
-	private Sedes carreras;
+	private List<Sedes> sedes;
 	
 	public Carreras() {
 
@@ -59,12 +60,12 @@ public class Carreras {
 		return id;
 	}
 
-	public Sedes getCarreras() {
-		return carreras;
+	public List<Sedes> getSedes() {
+		return sedes;
 	}
 
-	public void setCarreras(Sedes carreras) {
-		this.carreras = carreras;
+	public void setSedes(List<Sedes> sedes) {
+		this.sedes = sedes;
 	}
 
 	public String getCosto() {
