@@ -1,12 +1,6 @@
 package com.dojo.workspace.CTUni.services;
 
-import com.dojo.workspace.CTUni.repositories.CTunirepo;
-import com.dojo.workspace.CTUni.repositories.userRepo;
-import com.dojo.workspace.CTUni.repositories.Carrerasrepo;
-import com.dojo.workspace.CTUni.repositories.Sedesrepo;
-
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -14,6 +8,10 @@ import com.dojo.workspace.CTUni.models.Carreras;
 import com.dojo.workspace.CTUni.models.Sedes;
 import com.dojo.workspace.CTUni.models.Universidades;
 import com.dojo.workspace.CTUni.models.Usuario;
+import com.dojo.workspace.CTUni.repositories.CTunirepo;
+import com.dojo.workspace.CTUni.repositories.Carrerasrepo;
+import com.dojo.workspace.CTUni.repositories.Sedesrepo;
+import com.dojo.workspace.CTUni.repositories.userRepo;
 
 @Service
 public class CTuniServices {
@@ -31,6 +29,11 @@ public class CTuniServices {
     public List<Carreras> obtenerTodasLasCarreras() {
         return Carrerasrepo.findAll();
     }
+    
+    public List<Object[]> obtenerCarrerasSinRepetir() {
+        return Carrerasrepo.carrerasSinRepetir();
+    }
+    
     public Carreras obtenerCarrerasPorId(Long idcarreras) {
         return Carrerasrepo.findById(idcarreras).orElse(null);
     }

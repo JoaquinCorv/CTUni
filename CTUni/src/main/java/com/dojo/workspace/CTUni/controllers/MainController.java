@@ -50,6 +50,13 @@ public class MainController {
 
 		return "inicio.jsp";
 	}
+	
+//	@GetMapping("/two")
+//	public String second(Model viewModel) {
+//		List<Object[]> table2 = apiServ.SegundaPregunta();
+//		viewModel.addAttribute("segundaTabla", table2);
+//		return "segundapregunta.jsp";
+//	}
 
 	@GetMapping("/acercaDeNosotros")
 	public String nosotros(Model viewModel, HttpSession session) {
