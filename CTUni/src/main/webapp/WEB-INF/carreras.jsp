@@ -82,33 +82,33 @@
 					</div>
 	</header>
 	<main>
-	<section>
-			<div class="d-inline-block p-5 pt-5">
-				<h1>${carrera.carreraName}</h1>
-			</div>
-			<br>
-		<div class="p-3"><h5>duracion: ${carrera.duracion}</h5>
-		</div>
+<h1>Información de Sedes y Carreras</h1>
 
-		<br>
-		<div class="p-3"><h5><a href="${carrera.planDeEstudio}" > Plan de estudio</a></h5>
-		</div>
 
-			<br>
-		<br>
-		<div class="p-3"><h5>tipo: ${carrera.tipo}</h5>
-		</div>
 
-			<br>
-		<br>
-		<div class="p-3"><h5>costo: ${carrera.costo}</h5>
-		</div>
-		<br>
-		<br>
-		<div class="p-3">
-		<h5>universidades: ${carrera}</h5>
-		</div>
-		</section>
+<div class="container">
+    <h1>Detalles de la Carrera</h1>
+
+    <h2>Nombre de la Carrera: ${carrera.carreraName}</h2>
+    <p>Duración: ${carrera.duracion}</p>
+    <p>Tipo: ${carrera.tipo}</p>
+    <p>Costo: ${carrera.costo}</p>
+<p>Plan de Estudio: <a href="${carrera.planDeEstudio}" target="_blank">Ver plan de estudio</a></p>
+
+
+    <h2>Universidad que da la carrera</h2>
+    <ul>
+        <c:forEach var="sede" items="${Sedes}">
+            <li>${sede.sedesName}</li>
+            <li>Localidad: ${sede.localidad}</li>
+            <li>Dirección: ${sede.direccion}</li>
+            <li>Contacto Gmail: ${sede.contactoGmail}</li>
+            <li>Contacto Teléfono: ${sede.contactoTelefono}</li>
+        </c:forEach>
+    </ul>
+</div>
+
+
 		<footer>
 			<div id="carouselExampleCaptions" class="carousel slide w-75  mt-2">
         <div class="carousel-indicators ">

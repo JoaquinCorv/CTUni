@@ -15,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.dojo.workspace.CTUni.models.Carreras;
 import com.dojo.workspace.CTUni.models.Comentarios;
 import com.dojo.workspace.CTUni.models.Universidades;
+import com.dojo.workspace.CTUni.models.Sedes;
 import com.dojo.workspace.CTUni.models.Usuario;
 import com.dojo.workspace.CTUni.repositories.Carrerasrepo;
 import com.dojo.workspace.CTUni.services.CTuniServices;
@@ -83,16 +84,23 @@ public class MainController {
 
 	@GetMapping("/carreras/{idUni}")
 	public String carreras(@PathVariable("idUni") Long idUni, Model model, HttpSession sesion) {
-		boolean isLoggedIn = (sesion.getAttribute("userID") != null);
-		model.addAttribute("isLoggedIn", isLoggedIn);
-		Carreras carrera = ctuniServices.obtenerCarrerasPorId(idUni);
-		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
-		model.addAttribute("universidades", universidades);
-		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
-		model.addAttribute("carreras", carreras);
-		model.addAttribute("carrera", carrera);
-		return "carreras.jsp";
+	    boolean isLoggedIn = (sesion.getAttribute("userID") != null);
+	    model.addAttribute("isLoggedIn", isLoggedIn);
+
+	    Carreras carrera = ctuniServices.obtenerCarrerasPorId(idUni);
+	    model.addAttribute("carrera", carrera);
+	    List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
+	    model.addAttribute("universidades", universidades);
+
+	    List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+	    model.addAttribute("carreras", carreras);
+
+	    List<Sedes> sedesDeLaCarrera = carrera.getSedes();
+	    model.addAttribute("Sedes", sedesDeLaCarrera);
+
+	    return "carreras.jsp";
 	}
+
 
 	@GetMapping("/universidades/{idUni}")
 	public String universidadesc(@PathVariable("idUni") Long idUni, Model model, HttpSession sesion) {
