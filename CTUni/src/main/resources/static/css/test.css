@@ -1,0 +1,19 @@
+
+h1{
+	  background-color: #29248C;
+	  border-radius: 10px;
+}
+
+option{
+	background-color: #29248C;
+	border-radius: 10px;
+	color:white;
+}
+
+select{
+	background-color: #29248C;
+	border: 2px solid black;
+}
+script{
+	background-color: #29248C;
+}

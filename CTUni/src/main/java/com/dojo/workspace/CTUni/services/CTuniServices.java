@@ -9,8 +9,8 @@ import com.dojo.workspace.CTUni.models.Sedes;
 import com.dojo.workspace.CTUni.models.Universidades;
 import com.dojo.workspace.CTUni.models.Usuario;
 import com.dojo.workspace.CTUni.repositories.CTunirepo;
-import com.dojo.workspace.CTUni.repositories.Carrerasrepo;
 import com.dojo.workspace.CTUni.repositories.Sedesrepo;
+import com.dojo.workspace.CTUni.repositories.Carrerasrepo;
 import com.dojo.workspace.CTUni.repositories.userRepo;
 
 @Service
@@ -30,6 +30,10 @@ public class CTuniServices {
         return Carrerasrepo.findAll();
     }
     
+    public List<Sedes> obtenerTodasLasSedes() {
+        return Sedesrepo.findAll();
+    }
+    
     public List<Object[]> obtenerCarrerasSinRepetir() {
         return Carrerasrepo.carrerasSinRepetir();
     }
@@ -43,10 +47,6 @@ public class CTuniServices {
     public List<Universidades> obtenerTodasLasUniversidades() {
         return CTunirepo.findAll();
     }
-    public List<Sedes> obtenerTodasLasSedes() {
-        return Sedesrepo.findAll();
-    }
-    
     public boolean UniversidadesExiste(String Universidades) {
         return CTunirepo.existsByUniversidadName(Universidades);
     }
