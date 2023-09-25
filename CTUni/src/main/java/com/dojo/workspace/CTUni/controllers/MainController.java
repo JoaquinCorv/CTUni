@@ -255,7 +255,7 @@ public class MainController {
 			@RequestParam("answers[5]") String answer5, @RequestParam("answers[6]") String answer6,
 			@RequestParam("answers[7]") String answer7, @RequestParam("answers[8]") String answer8,
 			@RequestParam("answers[9]") String answer9, Model model) {
-		String[] answers = { answer0, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9,};
+		String[] answers = { answer0, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9};
 
 		// aca se guardan las respuestas
 		String selectedTopic = calculateSelectedTopic(answers);
