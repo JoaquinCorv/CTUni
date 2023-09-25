@@ -65,6 +65,8 @@ public class MainController {
 		viewModel.addAttribute("isLoggedIn", isLoggedIn);
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 		viewModel.addAttribute("universidades", universidades);
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		viewModel.addAttribute("carreras", carreras);
 		return "/universidades/Nosotros.jsp";
 	}
 
@@ -85,6 +87,8 @@ public class MainController {
 
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 		model.addAttribute("universidades", universidades);
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		model.addAttribute("carreras", carreras);
 
 		return "cuenta.jsp";
 	}
@@ -116,7 +120,8 @@ public class MainController {
 		// Servicio para buscar una universidad por id
 		// agregar la universidad encontrada al modelo
 		model.addAttribute("universidad", universidad);
-
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		model.addAttribute("carreras", carreras);
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 		model.addAttribute("universidades", universidades);
 		List<Comentarios> comentarios = commentService.obtenerTodasLasUniversidades();
@@ -142,6 +147,8 @@ public class MainController {
 
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 		model.addAttribute("universidades", universidades);
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		model.addAttribute("carreras", carreras);
 
 		return "guardados.jsp";
 	}
@@ -162,7 +169,10 @@ public class MainController {
 			return "redirect:/universidades/" + idUniversidad;
 
 		}
-
+		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
+		model.addAttribute("universidades", universidades);
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		model.addAttribute("carreras", carreras);
 		Universidades unaUniversidad = ctuniServices.unauni(idUniversidad);
 		boolean guardarDesguardar = (opcion.equals("guardar"));
 		Usuario usuario = userservices.encontrarUserPorId(userId);
@@ -188,6 +198,8 @@ public class MainController {
 
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
 		model.addAttribute("universidades", universidades);
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		model.addAttribute("carreras", carreras);
 
 		return "comentarios.jsp";
 	}
@@ -219,7 +231,10 @@ public class MainController {
 		Universidad.setRating(ctuniServices.obtenerPromedio(id));
 
 		ctuniServices.actualizarUniversidad(Universidad);
-
+		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
+		viewModel.addAttribute("universidades", universidades);
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		viewModel.addAttribute("carreras", carreras);
 		return "redirect:/universidades/" + id;
 	}
 
@@ -239,18 +254,17 @@ public class MainController {
 			@RequestParam("answers[3]") String answer3, @RequestParam("answers[4]") String answer4,
 			@RequestParam("answers[5]") String answer5, @RequestParam("answers[6]") String answer6,
 			@RequestParam("answers[7]") String answer7, @RequestParam("answers[8]") String answer8,
-			@RequestParam("answers[9]") String answer9, @RequestParam("answers[10]") String answer10,
-			@RequestParam("answers[11]") String answer11, @RequestParam("answers[12]") String answer12,
-			@RequestParam("answers[13]") String answer13, @RequestParam("answers[14]") String answer14,
-			@RequestParam("answers[15]") String answer15, @RequestParam("answers[16]") String answer16,
-			@RequestParam("answers[17]") String answer17, @RequestParam("answers[18]") String answer18,
-			@RequestParam("answers[19]") String answer19, Model model) {
-		String[] answers = { answer0, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9,
-				answer10, answer11, answer12, answer13, answer14, answer15, answer16, answer17, answer18, answer19 };
+			@RequestParam("answers[9]") String answer9, Model model) {
+		String[] answers = { answer0, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9,};
 
 		// aca se guardan las respuestas
 		String selectedTopic = calculateSelectedTopic(answers);
 
+		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
+		model.addAttribute("universidades", universidades);
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		model.addAttribute("carreras", carreras);
+		
 		// esto te lleva al topico en cuestion
 		return "redirect:/test/result?topic=" + selectedTopic;
 	}
@@ -258,6 +272,10 @@ public class MainController {
 	@GetMapping("/test/result")
 	public String showResultPage(@RequestParam(name = "topic") String topic, Model model) {
 		model.addAttribute("topic", topic);
+		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
+		model.addAttribute("universidades", universidades);
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		model.addAttribute("carreras", carreras);
 		return "results.jsp";
 	}
 
