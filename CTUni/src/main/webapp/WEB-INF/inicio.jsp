@@ -173,7 +173,7 @@
 						<div
 							class="carousel-caption d-none d-md-block opacity-50 h-25 bg-black">
 							<h5>Ranking 2</h5>
-							<p>UCA-Universidad Católica Argentina</p>
+							<p>UCA-Universidad Catï¿½lica Argentina</p>
 						</div>
 					</div>
 
@@ -190,7 +190,7 @@
 						<div
 							class="carousel-caption d-none d-md-block opacity-50 h-25 bg-black">
 							<h5>Ranking 4</h5>
-							<p>UTN-Universidad Tecnológica Nacional.</p>
+							<p>UTN-Universidad Tecnolï¿½gica Nacional.</p>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -214,7 +214,7 @@
 						<div
 							class="carousel-caption d-none d-md-block opacity-50 h-25 bg-black">
 							<h5>Ranking 7</h5>
-							<p>ITBA-Instituto Tecnológico de Buenos Aires.</p>
+							<p>ITBA-Instituto Tecnolï¿½gico de Buenos Aires.</p>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -313,7 +313,7 @@
 						<div
 							class="carousel-caption d-none d-md-block opacity-50 h-25 bg-black">
 							<h5>Ranking 19</h5>
-							<p>UMAI-Universidad Maimónides.</p>
+							<p>UMAI-Universidad Maimï¿½nides.</p>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -353,7 +353,7 @@
 						<div
 							class="carousel-caption d-none d-md-block opacity-50 h-25 bg-black">
 							<h5>Ranking 24</h5>
-							<p>UNIPE-Universidad Pedagógica Nacional Argentina.</p>
+							<p>UNIPE-Universidad Pedagï¿½gica Nacional Argentina.</p>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -369,7 +369,7 @@
 						<div
 							class="carousel-caption d-none d-md-block opacity-50 h-25 bg-black">
 							<h5>Ranking 26</h5>
-							<p>ESEADE-Escuela de Economía y Administración de Empresas.</p>
+							<p>ESEADE-Escuela de Economï¿½a y Administraciï¿½n de Empresas.</p>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -462,9 +462,9 @@
 			<div class="row">
 				<div class="col-3 me-3 ms-5">
 					<p>
-						<ins> Integrantes</ins>: Ailin Lell <br> Luciano Altamirano <br> Joaquín
-						Corvalán <br> Francisco Encalada <br> Tomás Petrucci <br>
-						Julián Albornoz
+						<ins> Integrantes</ins>: Ailin Lell <br> Luciano Altamirano <br> Joaquï¿½n
+						Corvalï¿½n <br> Francisco Encalada <br> Tomï¿½s Petrucci <br>
+						Juliï¿½n Albornoz
 					</p>
 				</div>
 				<div class="col-3 ms-5">
@@ -476,7 +476,7 @@
 					 <a> Cuenta</a>
 				</div>
 				<div class="col-3 ">
-					<p>CTUni fue diseñado y construido con todo el amor del mundo por
+					<p>CTUni fue diseï¿½ado y construido con todo el amor del mundo por
 						el equipo de Camino a Tu Universidad.</p>
 				</div>
 			</div>
