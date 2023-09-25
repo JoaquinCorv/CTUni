@@ -12,7 +12,7 @@
 <meta charset="ISO-8859-1">
 <title>Nombre de la Carrera</title>
 <!--Bootstrap-->
-<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <!--Cambiar para que coincida con tu archivo/estructura de nombres-->
 <link rel="stylesheet" href="/css/carreras.css">
@@ -82,7 +82,7 @@
 					</div>
 	</header>
 	<main>
-<h1>Información de Sedes y Carreras</h1>
+<h1>Informaciï¿½n de Sedes y Carreras</h1>
 
 
 
@@ -90,7 +90,7 @@
     <h1>Detalles de la Carrera</h1>
 
     <h2>Nombre de la Carrera: ${carrera.carreraName}</h2>
-    <p>Duración: ${carrera.duracion}</p>
+    <p>Duraciï¿½n: ${carrera.duracion}</p>
     <p>Tipo: ${carrera.tipo}</p>
     <p>Costo: ${carrera.costo}</p>
 <p>Plan de Estudio: <a href="${carrera.planDeEstudio}" target="_blank">Ver plan de estudio</a></p>
@@ -101,9 +101,9 @@
         <c:forEach var="sede" items="${Sedes}">
             <li>${sede.sedesName}</li>
             <li>Localidad: ${sede.localidad}</li>
-            <li>Dirección: ${sede.direccion}</li>
+            <li>Direcciï¿½n: ${sede.direccion}</li>
             <li>Contacto Gmail: ${sede.contactoGmail}</li>
-            <li>Contacto Teléfono: ${sede.contactoTelefono}</li>
+            <li>Contacto Telï¿½fono: ${sede.contactoTelefono}</li>
         </c:forEach>
     </ul>
 </div>

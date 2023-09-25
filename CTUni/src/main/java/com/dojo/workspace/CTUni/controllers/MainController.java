@@ -50,7 +50,7 @@ public class MainController {
 
 		return "inicio.jsp";
 	}
-	
+
 //	@GetMapping("/two")
 //	public String second(Model viewModel) {
 //		List<Object[]> table2 = apiServ.SegundaPregunta();
@@ -60,7 +60,7 @@ public class MainController {
 
 	@GetMapping("/acercaDeNosotros")
 	public String nosotros(Model viewModel, HttpSession session) {
-		
+
 		boolean isLoggedIn = (session.getAttribute("userID") != null);
 		viewModel.addAttribute("isLoggedIn", isLoggedIn);
 		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
@@ -91,23 +91,22 @@ public class MainController {
 
 	@GetMapping("/carreras/{idUni}")
 	public String carreras(@PathVariable("idUni") Long idUni, Model model, HttpSession sesion) {
-	    boolean isLoggedIn = (sesion.getAttribute("userID") != null);
-	    model.addAttribute("isLoggedIn", isLoggedIn);
+		boolean isLoggedIn = (sesion.getAttribute("userID") != null);
+		model.addAttribute("isLoggedIn", isLoggedIn);
 
-	    Carreras carrera = ctuniServices.obtenerCarrerasPorId(idUni);
-	    model.addAttribute("carrera", carrera);
-	    List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
-	    model.addAttribute("universidades", universidades);
+		Carreras carrera = ctuniServices.obtenerCarrerasPorId(idUni);
+		model.addAttribute("carrera", carrera);
+		List<Universidades> universidades = ctuniServices.obtenerTodasLasUniversidades();
+		model.addAttribute("universidades", universidades);
 
-	    List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
-	    model.addAttribute("carreras", carreras);
+		List<Carreras> carreras = ctuniServices.obtenerTodasLasCarreras();
+		model.addAttribute("carreras", carreras);
 
-	    List<Sedes> sedesDeLaCarrera = carrera.getSedes();
-	    model.addAttribute("Sedes", sedesDeLaCarrera);
+		List<Sedes> sedesDeLaCarrera = carrera.getSedes();
+		model.addAttribute("Sedes", sedesDeLaCarrera);
 
-	    return "carreras.jsp";
+		return "carreras.jsp";
 	}
-
 
 	@GetMapping("/universidades/{idUni}")
 	public String universidadesc(@PathVariable("idUni") Long idUni, Model model, HttpSession sesion) {
@@ -224,7 +223,8 @@ public class MainController {
 		return "redirect:/universidades/" + id;
 	}
 
-	private String[] topics = { "Ciencia", "Deportes", "Arte", "Tecnologia", "Literatura", "Politica" };
+	private String[] topics = { "Ciencia", "Deportes", "Arte y Musica", "Tecnologia", "Literatura e Historia",
+			"Politica y Economia" };
 
 	@GetMapping("/test")
 	public String showTestPage(Model model, HttpSession session) {
@@ -239,8 +239,14 @@ public class MainController {
 			@RequestParam("answers[3]") String answer3, @RequestParam("answers[4]") String answer4,
 			@RequestParam("answers[5]") String answer5, @RequestParam("answers[6]") String answer6,
 			@RequestParam("answers[7]") String answer7, @RequestParam("answers[8]") String answer8,
-			@RequestParam("answers[9]") String answer9, Model model) {
-		String[] answers = { answer0, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9 };
+			@RequestParam("answers[9]") String answer9, @RequestParam("answers[10]") String answer10,
+			@RequestParam("answers[11]") String answer11, @RequestParam("answers[12]") String answer12,
+			@RequestParam("answers[13]") String answer13, @RequestParam("answers[14]") String answer14,
+			@RequestParam("answers[15]") String answer15, @RequestParam("answers[16]") String answer16,
+			@RequestParam("answers[17]") String answer17, @RequestParam("answers[18]") String answer18,
+			@RequestParam("answers[19]") String answer19, Model model) {
+		String[] answers = { answer0, answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9,
+				answer10, answer11, answer12, answer13, answer14, answer15, answer16, answer17, answer18, answer19 };
 
 		// aca se guardan las respuestas
 		String selectedTopic = calculateSelectedTopic(answers);
