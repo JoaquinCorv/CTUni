@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 header {
-	background-color:#29248C ;
+	background-color:rgb(41, 36, 140) ;
 }
 .container{
 	background-color:withe;
@@ -87,7 +87,21 @@ nav a:hover {
 body{
 	background: linear-gradient(to right,#33b7e2,#5671b9,#a04693,#dc1978);
 }
+.sede{
+	color:white;
+	text-align: center;
+	padding: 15px;
+}
 
+div{
+	color:white;
+	background-color:rgb(41, 36, 140);
+	border-radius:30px;
+}
+
+a{
+	color:white;
+}
 main {
 	color: black;
 }

@@ -87,7 +87,7 @@
 					</div>
 	</header>
 	<main>
-<h1>Informaci&oacuten de Sedes y Carreras</h1>
+<h1 class="sede">Informaci&oacuten de Sedes y Carreras</h1>
 
 
 
