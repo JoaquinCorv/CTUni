@@ -28,7 +28,7 @@
 				<nav class="navbar navbar-expand-lg navbar-dark">
 					<div class="container-fluid">
 						<a class="navbar-brand" href="/"> <img class=""
-							src="./imagenes/Logo_blanco.png" alt="Logo del Proyecto"
+							src="/imagenes/Logo_blanco.png" alt="Logo del Proyecto"
 							id="logo" width="130">
 						</a>
 						<h2>Camino a Tu Universidad</h2>

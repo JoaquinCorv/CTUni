@@ -17,10 +17,11 @@
 <link rel="stylesheet"
 	href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <!--Cambiar para que coincida con tu archivo/estructura de nombres-->
 <link rel="stylesheet" href="/css/carreras.css">
-<link rel="icon" href="/css/carreras.css">
 <script type="text/javascript" src="/js/app.js"></script>
 <link rel="icon" href="./imagenes/gorra-de-posgrado.png">
 </head>
@@ -31,7 +32,7 @@
 				<nav class="navbar navbar-expand-lg navbar-dark">
 					<div class="container-fluid">
 						<a class="navbar-brand" href="/"> <img class=""
-							src="./plantillas/Logo_blanco.png" alt="Logo del Proyecto"
+							src="/imagenes/Logo_blanco.png" alt="Logo del Proyecto"
 							id="logo" width="130">
 						</a>
 						<h2>Camino a Tu Universidad</h2>
@@ -111,6 +112,6 @@
         </c:forEach>
     </ul>
 </div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 	</main>
 </body>
-</html>
