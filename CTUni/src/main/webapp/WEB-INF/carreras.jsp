@@ -16,7 +16,7 @@
 <!--Bootstrap-->
 <link rel="stylesheet"
 	href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
-<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 
 
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
@@ -87,31 +87,40 @@
 					</div>
 	</header>
 	<main>
-<h1 class="sede">Informaci&oacuten de Sedes y Carreras</h1>
-
-
-
-<div class="container">
-    <h1>Detalles de la Carrera</h1>
-
-    <h2>Nombre de la Carrera: ${carrera.carreraName}</h2>
-    <p>Duraci&oacuten: ${carrera.duracion}</p>
-    <p>Tipo: ${carrera.tipo}</p>
-    <p>Costo: ${carrera.costo}</p>
-<p>Plan de Estudio: <a href="${carrera.planDeEstudio}" target="_blank">Ver plan de estudio</a></p>
-
-
-    <h2>Universidad que da la carrera</h2>
-    <ul>
-        <c:forEach var="sede" items="${Sedes}">
-            <li>${sede.sedesName}</li>
-            <li>Localidad: ${sede.localidad}</li>
-            <li>Direcci&oacuten: ${sede.direccion}</li>
-            <li>Contacto Gmail: ${sede.contactoGmail}</li>
-            <li>Contacto Telefono: ${sede.contactoTelefono}</li>
-        </c:forEach>
-    </ul>
-</div>
+	<div class="list-group pt-1">
+		<div class="d-flex flex-column mb-1">
+			<div class="p-2">
+			<h1>Informaci&oacuten de Sedes y Carreras</h1>
+			<h2>Detalles de la Carrera</h2>
+			</div>
+		</div>
+		<br>
+		<div class="p-3"><h5>Nombre de la Carrera: ${carrera.carreraName}</h5>
+		</div>
+		<div class="p-3"><h5>Duraci&oacuten: ${carrera.duracion}</h5>
+		</div>
+		<div class="p-3"><h5>Tipo: ${carrera.tipo}</h5>
+		</div>
+		<div class="p-3"><h5>Costo: ${carrera.costo}</h5>
+		</div>
+		<div class="p-3"><h5>Plan de Estudio: <a href="${carrera.planDeEstudio}" target="_blank">Ver plan de estudio</a></h5>
+		</div>
+		<div class="p-2">
+			<h2>Universidad que da la carrera</h2>
+			</div>
+		<c:forEach var="sede" items="${Sedes}">
+			<div class="p-3"><h5>${sede.sedesName}</h5>
+			</div>
+			<div class="p-3"><h5>Localidad: ${sede.localidad}</h5>
+			</div>
+			<div class="p-3"><h5>Direcci&oacuten: ${sede.direccion}</h5>
+			</div>
+			<div class="p-3"><h5>Contacto Gmail: ${sede.contactoGmail}</h5>
+			</div>
+			<div class="p-3"><h5>Contacto Telefono: ${sede.contactoTelefono}</h5>
+			</div>
+		</c:forEach>
+		</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 	</main>
 </body>
