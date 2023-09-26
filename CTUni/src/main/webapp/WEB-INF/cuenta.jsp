@@ -66,7 +66,12 @@
 									class="nav-link dropdown-toggle" href="#" role="button"
 									data-bs-toggle="dropdown" aria-expanded="false"> Carreras </a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="#">NombreUni</a></li>
+										<c:forEach var="uni" items="${carreras}">
+											<li><a class="dropdown-item"
+												href="/carreras/${uni.id}"> <c:out
+														value="${uni.carreraName}" />
+											</a></li>
+										</c:forEach>
 									</ul></li>
 								<li class="nav-item"><a class="nav-link active"
 									href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
@@ -76,9 +81,12 @@
 										</c:choose>
 								</a></li>
 							</ul>
-				</nav>
-			</div>
-		</div>
+
+						</div>
+					</div>
+					</nav>
+					</div>
+					</div>
 	</header>
 	<div class="list-group w-50 ps-3 pt-3 m-3">
 	<div class="cuenta mb-3">
@@ -100,8 +108,8 @@
 
 		<a href="/test" >Test Vocacional</a> <br> <br> 
 		<a href="/guardados">Guardados</a> <br> <br> 
-		<a href="/">Volver a la Página Principal</a> <br> <br> 
-		<a href="/logout">Cerrar sesión</a>
+		<a href="/">Volver a la P&aacutegina Principal</a> <br> <br> 
+		<a href="/logout">Cerrar sesi&oacuten</a>
 	</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

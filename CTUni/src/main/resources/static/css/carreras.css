@@ -3,6 +3,9 @@
 header {
 	background-color:#29248C ;
 }
+.container{
+	background-color:withe;
+}
 
 .container-fluid {
 	display: flex;

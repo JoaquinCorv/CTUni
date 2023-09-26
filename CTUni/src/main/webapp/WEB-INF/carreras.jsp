@@ -10,15 +10,19 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Nombre de la Carrera</title>
+
+<title>Carreras</title>
+
 <!--Bootstrap-->
-<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <!--Cambiar para que coincida con tu archivo/estructura de nombres-->
 <link rel="stylesheet" href="/css/carreras.css">
 <link rel="icon" href="/css/carreras.css">
 <script type="text/javascript" src="/js/app.js"></script>
-<link rel="icon" href="imagenes/gorra-de-posgrado.png">
+<link rel="icon" href="./imagenes/gorra-de-posgrado.png">
 </head>
 <body>
 <header>
@@ -27,7 +31,7 @@
 				<nav class="navbar navbar-expand-lg navbar-dark">
 					<div class="container-fluid">
 						<a class="navbar-brand" href="/"> <img class=""
-							src="./imagenes/Logo_blanco.png" alt="Logo del Proyecto"
+							src="./plantillas/Logo_blanco.png" alt="Logo del Proyecto"
 							id="logo" width="130">
 						</a>
 						<h2>Camino a Tu Universidad</h2>
@@ -55,7 +59,7 @@
 											</a></li>
 										</c:forEach>
 									</ul></li>
-					<li class="nav-item dropdown"><a
+								<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="#" role="button"
 									data-bs-toggle="dropdown" aria-expanded="false"> Carreras </a>
 									<ul class="dropdown-menu">
@@ -66,7 +70,7 @@
 											</a></li>
 										</c:forEach>
 									</ul></li>
-									<li class="nav-item"><a class="nav-link active"
+								<li class="nav-item"><a class="nav-link active"
 									href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
 										<c:choose>
 											<c:when test="${isLoggedIn}"><img class="usuario rounded-circle" src="/imagenes/usuarioinicio.jpg" width="35"></c:when>
@@ -82,7 +86,7 @@
 					</div>
 	</header>
 	<main>
-<h1>Información de Sedes y Carreras</h1>
+<h1>Informaci&oacuten de Sedes y Carreras</h1>
 
 
 
@@ -90,7 +94,7 @@
     <h1>Detalles de la Carrera</h1>
 
     <h2>Nombre de la Carrera: ${carrera.carreraName}</h2>
-    <p>Duración: ${carrera.duracion}</p>
+    <p>Duraci&oacuten: ${carrera.duracion}</p>
     <p>Tipo: ${carrera.tipo}</p>
     <p>Costo: ${carrera.costo}</p>
 <p>Plan de Estudio: <a href="${carrera.planDeEstudio}" target="_blank">Ver plan de estudio</a></p>
@@ -101,57 +105,12 @@
         <c:forEach var="sede" items="${Sedes}">
             <li>${sede.sedesName}</li>
             <li>Localidad: ${sede.localidad}</li>
-            <li>Dirección: ${sede.direccion}</li>
+            <li>Direcci&oacuten: ${sede.direccion}</li>
             <li>Contacto Gmail: ${sede.contactoGmail}</li>
             <li>Contacto Telefono: ${sede.contactoTelefono}</li>
         </c:forEach>
     </ul>
 </div>
-
-
-		<footer>
-			<div id="carouselExampleCaptions" class="carousel slide w-75  mt-2">
-        <div class="carousel-indicators ">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="container-fluid ">
-            <div class="carousel-inner"  style="height: 30rem;">
-                <div class="carousel-item active">
-                  <img src="./UCA.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block opacity-50 h-25">
-                    <h5>ejemplos</h5>
-                    <p>Aca van imagenes relacionadas con la Carrera</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="src/main/resources/static/css/imagenes/fotoProvicional.jpeg" class="d-block w-100" alt="auto">
-                  <div class="carousel-caption d-none d-md-block opacity-50">
-                    <h5>Ranking 2</h5>
-                    <p>Aca van imagenes relacionadas con la Carrera</p>
-                  </div>
-                </div>
-                
-                <div class="carousel-item">
-                  <img src="./UCA.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block opacity-50 ">
-                    <h5>Ranking 3</h5>
-                    <p>Aca van imagenes relacionadas con la Carrera</p>
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-        </div>
-		</footer>
 	</main>
 </body>
 </html>

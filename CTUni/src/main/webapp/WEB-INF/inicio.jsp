@@ -457,14 +457,14 @@
 			</div>
 		</div>
 	</main>
-	<footer>
+		<footer>
 		<div class="list-group pt-2">
 			<div class="row">
 				<div class="col-3 me-3 ms-5">
 					<p>
-						<ins> Integrantes</ins>: Ailin Lell <br> Luciano Altamirano <br> Joaqu�n
-						Corval�n <br> Francisco Encalada <br> Tom�s Petrucci <br>
-						Juli�n Albornoz
+						<ins> Integrantes</ins>: Ailin Lell <br> Luciano Altamirano <br> Joaqu&iacuten
+						Corval&aacuten <br> Francisco Encalada <br> Tom&oacutes Petrucci <br>
+						Juli&aacuten Albornoz
 					</p>
 				</div>
 				<div class="col-3 ms-5">
@@ -476,7 +476,7 @@
 					 <a> Cuenta</a>
 				</div>
 				<div class="col-3 ">
-					<p>CTUni fue dise�ado y construido con todo el amor del mundo por
+					<p>CTUni fue dise&ntildeado y construido con todo el amor del mundo por
 						el equipo de Camino a Tu Universidad.</p>
 				</div>
 			</div>

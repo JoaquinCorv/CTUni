@@ -64,7 +64,12 @@
 									class="nav-link dropdown-toggle" href="#" role="button"
 									data-bs-toggle="dropdown" aria-expanded="false"> Carreras </a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="#">NombreUni</a></li>
+										<c:forEach var="uni" items="${carreras}">
+											<li><a class="dropdown-item"
+												href="/carreras/${uni.id}"> <c:out
+														value="${uni.carreraName}" />
+											</a></li>
+										</c:forEach>
 									</ul></li>
 								<li class="nav-item"><a class="nav-link active"
 									href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
@@ -81,6 +86,7 @@
 					</div>
 					</div>
 	</header>
+
 							<div class="list-group pt-2 w-50 ">
 							<c:forEach var="uni" items="${usuario.guardaruni}">
                         <h4>
@@ -98,5 +104,30 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
 		crossorigin="anonymous"></script>
+				<footer>
+		<div class="list-group pt-2">
+			<div class="row">
+				<div class="col-3 me-3 ms-5">
+					<p>
+						<ins> Integrantes</ins>: Ailin Lell <br> Luciano Altamirano <br> Joaqu&iacuten
+						Corval&aacuten <br> Francisco Encalada <br> Tom&oacutes Petrucci <br>
+						Juli&aacuten Albornoz
+					</p>
+				</div>
+				<div class="col-3 ms-5">
+					<a href="/"> Inicio </a> <br> 
+					<a href="/acercaDeNosotros"> Acerca de Nosotros </a> <br>
+					 <a> Universidades </a><br> 
+					 <a> Carreras </a> <br> 
+					 <a href="/CTUniRegister"> Login/Registro </a> <br> 
+					 <a> Cuenta</a>
+				</div>
+				<div class="col-3 ">
+					<p>CTUni fue dise&ntildeado y construido con todo el amor del mundo por
+						el equipo de Camino a Tu Universidad.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

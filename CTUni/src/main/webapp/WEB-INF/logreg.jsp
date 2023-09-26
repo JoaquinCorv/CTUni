@@ -20,12 +20,7 @@
 </head>
 
 <body>
-
-
-
-
-
-	<header>
+<header>
 		<div class="container-fluid" id="encabezado">
 			<div class="container">
 				<nav class="navbar navbar-expand-lg navbar-dark">
@@ -63,12 +58,17 @@
 									class="nav-link dropdown-toggle" href="#" role="button"
 									data-bs-toggle="dropdown" aria-expanded="false"> Carreras </a>
 									<ul class="dropdown-menu">
-										<li><a class="dropdown-item" href="#">NombreUni</a></li>
+										<c:forEach var="uni" items="${carreras}">
+											<li><a class="dropdown-item"
+												href="/carreras/${uni.id}"> <c:out
+														value="${uni.carreraName}" />
+											</a></li>
+										</c:forEach>
 									</ul></li>
 								<li class="nav-item"><a class="nav-link active"
 									href="<c:if test='${isLoggedIn}'>/cuenta</c:if><c:if test='${!isLoggedIn}'>/CTUniRegister</c:if>">
 										<c:choose>
-											<c:when test="${isLoggedIn}">Cuenta</c:when>
+											<c:when test="${isLoggedIn}"><img class="usuario rounded-circle" src="/imagenes/usuarioinicio.jpg" width="35"></c:when>
 											<c:otherwise>Login/Registro</c:otherwise>
 										</c:choose>
 								</a></li>
@@ -76,10 +76,12 @@
 
 						</div>
 					</div>
+					</nav>
+					</div>
+					</div>
 	</header>
-
-	<div class="grupo">
-		<h2>Regístrate</h2>
+		<div class="grupo">
+		<h2>Reg&iacutestrate</h2>
 		<form:form class="border p-3 pt-0 pb-0" method="POST"
 			action="/registration" modelAttribute="user">
 			<div class="form-group row mb-1">
@@ -95,13 +97,13 @@
 				<form:input type="email" path="email" />
 			</div>
 			<div class="form-group row mb-1">
-				<form:label path="password">Contraseña:
+				<form:label path="password">Contrase&ntildea:
                 <form:errors path="password" cssClass="text-danger" />
 				</form:label>
 				<form:password path="password" />
 			</div>
 			<div class="form-group row mb-3">
-				<form:label path="passwordConfirmation">Reingrese su Contraseña:
+				<form:label path="passwordConfirmation">Reingrese su Contrase&ntildea:
                 <form:errors path="passwordConfirmation"
 						cssClass="text-danger" />
 				</form:label>
@@ -115,7 +117,7 @@
 	</div>
 
 	<div class="grupo">
-		<h2>Iniciá Sesión</h2>
+		<h2>Inicio de Sesi&oacuten</h2>
 		<form:form class="border p-3 pt-0 pb-0" method="POST" action="/login"
 			modelAttribute="login">
 			<div class="form-group row mb-1">
@@ -125,7 +127,7 @@
 				<form:input type="email" path="email" />
 			</div>
 			<div class="form-group row mb-3">
-				<form:label path="password">Contraseña:
+				<form:label path="password">Contrase&ntildea:
                 <form:errors path="password" cssClass="text-danger" />
 				</form:label>
 				<form:password path="password" />
